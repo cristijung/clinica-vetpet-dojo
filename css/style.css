@@ -28,3 +28,10 @@ body {
   object-fit: cover;
   object-position: center;
 }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
