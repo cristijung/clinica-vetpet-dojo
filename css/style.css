@@ -50,6 +50,11 @@ main {
   margin: auto;
 }
 
+.about-us-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .image-about {
   position: relative;
 
