@@ -1,0 +1,35 @@
+.presentation-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.presentation-description p {
+  text-align: center;
+}
+
+.presentation-description span {
+  color: var(--primary);
+}
+
+.presentation-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.custom-card-presentation {
+  padding: 1rem;
+  background-color: transparent;
+  border: solid 3px var(--secondary);
+  max-width: 30%;
+}
+
+.custom-card-header-presentation h3,
+p {
+  color: var(--primary);
+}
+
+.custom-card-body-presentation {
+  /* Body do card */
+}
