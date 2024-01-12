@@ -20,4 +20,18 @@
 ## 6. Página de Exames:
 - Lista de exames disponíveis na clínica veterinária.
 
-### - Essas especificações fornecem uma estrutura básica para o desenvolvimento do sistema de clínica veterinária. Vocês podem expandir e personalizar cada seção conforme necessário para atender aos requisitos específicos do projeto.
+# Requisitos
+- Refinar o código e refinar o layout valorizando as:
+- navegabilidade
+- acessibilidade
+- usabilidade
+- UX/UI
+- Não esqueça que vcs estão trabalhando com:
+- Array
+- Nos requisitos precisa ter:
+- Métodos de Array;
+- Foreach;
+- Map e/ou filter;
+- Método Reducer;
+
+### Essas especificações fornecem uma estrutura básica para o desenvolvimento do sistema de clínica veterinária. Vocês podem expandir e personalizar cada seção conforme necessário para atender aos requisitos específicos do projeto.
