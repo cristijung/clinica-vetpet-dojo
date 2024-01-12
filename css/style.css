@@ -3,7 +3,7 @@
   --secondary: #739072;
   --tertiary: #86a789;
   --quaternary: #d2e3c8;
-  --beige: #F6F2DB;
+  --beige: #f6f2db;
 }
 
 .navbar {
@@ -14,6 +14,17 @@
   font-size: 2rem;
 }
 
-body{
-  background-color: var(--beige)
+body {
+  background-color: var(--beige);
+}
+
+/* .custom-container {
+  width: min(100% - 60px, 1440px);
+  margin: 0 auto;
+} */
+
+.hero-img {
+  height: 800px;
+  object-fit: cover;
+  object-position: center;
 }
