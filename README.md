@@ -34,4 +34,10 @@
 - Map e/ou filter;
 - Método Reducer;
 
+## Inspirações by Pinterest
+
+![alt text](./assets/img1.jpg)
+
+![alt text](./assets/img2.jpg)
+
 ### Essas especificações fornecem uma estrutura básica para o desenvolvimento do sistema de clínica veterinária. Vocês podem expandir e personalizar cada seção conforme necessário para atender aos requisitos específicos do projeto.
