@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Clínica VetPet</title>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,66 +13,83 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/consultas.css">
+
   </head>
   <body>
     <header>
-      <nav class="navbar bg-body-tertiary fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"
-            ><i class="ph ph-paw-print mx-3"></i><strong>Pet</strong>Clinic</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation"
-          >
+      <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top" aria-label="Barra de Navegação do Cabeçalho">
+        <div class="container">
+          <a class="navbar-brand" href="#"><i class="ph ph-paw-print"></i><strong>Pet</strong>Clinic</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div
-            class="offcanvas offcanvas-end"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-          >
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                <i class="ph ph-paw-print mx-3"></i><strong>Pet</strong>Clinic</a
-                >
+                <i class="ph ph-paw-print"></i><strong>Pet</strong>Clinic</a>
               </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html"
-                          >Home</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="../pages/especialidades.html"
-                          >Especialidades</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="../pages/exames.html"
-                          >Exames</a
-                        >
-                      </li>
+                  <a class="nav-link" href="./pages/consultas.html">Consultas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pages/especialidades.html">Especialidades</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pages/exames.html">Exames</a>
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </nav>
     </header>
+
+    <section id="presentation">
+      <img src="https://placeholder.com/1920x600" alt="">
+      <div class="container presentation-description">
+        <h1>Agendamento Rápido em <span>3 Simples Passos</span></h1>
+        <p>No Consulta Pet Online, tornamos o processo de agendamento de consultas veterinárias simples e conveniente. Siga estas três etapas fáceis para garantir o melhor cuidado para o seu amado animal de estimação: </p>
+      </div>
+      <div class="presentation-steps container">
+        <div class="card custom-card-presentation">
+          <div class="custom-card-header-presentation">
+            <h3>01</h3>
+            <p>Escolha</p>
+          </div>
+          <div class="custom-card-body-presentation">
+            <h2>Especialidade Veterinária</h2>
+            <p>Selecione qual tipo de consulta você deseja realizar com seu pet</p>
+          </div>
+        </div>
+        <div class="card custom-card-presentation">
+          <div class="custom-card-header-presentation">
+            <h3>01</h3>
+            <p>Escolha</p>
+          </div>
+          <div class="custom-card-body-presentation">
+            <h2>Especialidade Veterinária</h2>
+            <p>Selecione qual tipo de consulta você deseja realizar com seu pet</p>
+          </div>
+        </div>
+        <div class="card custom-card-presentation">
+          <div class="custom-card-header-presentation">
+            <h3>01</h3>
+            <p>Escolha</p>
+          </div>
+          <div class="custom-card-body-presentation">
+            <h2>Especialidade Veterinária</h2>
+            <p>Selecione qual tipo de consulta você deseja realizar com seu pet</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
