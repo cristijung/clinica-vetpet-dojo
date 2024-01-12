@@ -49,3 +49,11 @@ main {
   max-width: 15rem;
   margin: auto;
 }
+
+.image-about{
+  justify-content: flex-start;
+}
+
+.image-about img{
+  max-width: 40%;
+}
