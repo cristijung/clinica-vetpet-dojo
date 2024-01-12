@@ -18,6 +18,10 @@ body {
   background-color: var(--beige);
 }
 
+main {
+  margin-top: 3.5rem;
+}
+
 /* .custom-container {
   width: min(100% - 60px, 1440px);
   margin: 0 auto;
