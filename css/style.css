@@ -76,3 +76,18 @@ main {
 
   left: -50px;
 }
+
+.advantages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.custom-card-icon {
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
