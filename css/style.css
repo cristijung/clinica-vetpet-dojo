@@ -1,0 +1,14 @@
+:root {
+  --primary: #4f6f52;
+  --secondary: #739072;
+  --tertiary: #86a789;
+  --quaternary: #d2e3c8;
+}
+
+.navbar {
+  background-color: var(--primary) !important;
+}
+
+.ph .ph-paw-print {
+  font-size: 2rem;
+}
