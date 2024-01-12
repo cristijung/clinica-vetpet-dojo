@@ -40,20 +40,34 @@ main {
   gap: 1rem;
 }
 
-.card-custom{
-  width: min(100%,300px)
+.card-custom {
+  width: min(100%, 300px);
 }
 
-.card-image-custom{
+.card-image-custom {
   padding: 2rem;
   max-width: 15rem;
   margin: auto;
 }
 
-.image-about{
-  justify-content: flex-start;
+.image-about {
+  position: relative;
+
+  width: 150px;
+
+  height: 150px;
+
+  border-radius: 9999px;
+
+  overflow: hidden;
 }
 
-.image-about img{
-  max-width: 40%;
+.image-about img {
+  max-width: 250px;
+
+  position: absolute;
+
+  top: 0px;
+
+  left: -50px;
 }
