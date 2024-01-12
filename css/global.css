@@ -1,0 +1,23 @@
+:root {
+  --text-black: #000;
+  --text-white: #ffffff;
+  --primary: #718355;
+  --secondary: #87986A;
+  --accent: #97A97C;
+  --bg-color: #ecf1e6;
+
+  --radii-large: 16px;
+  --radii-medium: 8px;
+  --radii-small: 4px;
+}
+
+.navbar {
+  background-color: var(--primary) !important;
+  color: var(--text-white);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
