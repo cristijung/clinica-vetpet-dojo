@@ -1,21 +1,5 @@
-:root {
-  --primary: #4f6f52;
-  --secondary: #739072;
-  --tertiary: #86a789;
-  --quaternary: #d2e3c8;
-  --beige: #f6f2db;
-}
-
-.navbar {
-  background-color: var(--primary) !important;
-}
-
-.ph .ph-paw-print {
-  font-size: 2rem;
-}
-
 body {
-  background-color: var(--beige);
+  background-color: var(--bg-color);
 }
 
 main {
