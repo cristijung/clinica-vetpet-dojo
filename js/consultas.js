@@ -97,7 +97,45 @@ function addOtherMedicListener() {
 
 function onSubmit(event) {
   event.preventDefault();
-  // Validações aqui
+
+  const clientName = event.target["client-name"].value;
+  const telephone = event.target["client-tel"].value;
+  const animal = event.target["animal-select"].value;
+  const otherAnimal = event.target["other-animal"]?.value;
+  const specialty = event.target["specialty"].value;
+  const doctor = event.target["doctor"].value;
+  const date = event.target["date-query"].value;
+
+  updateLocalStorage({
+    clientName,
+    telephone,
+    animal: animal === "Outro" ? otherAnimal : animal,
+    specialty,
+    doctor,
+    date,
+  });
+}
+
+function updateLocalStorage(item) {
+  const localStorageData = localStorage.getItem("@vetpet:consultas") || [];
+
+  if (localStorageData.length === 0) {
+    localStorage.setItem("@vetpet:consultas", JSON.stringify([item]));
+  }
+
+  const parse = JSON.parse(localStorageData);
+
+  localStorage.setItem("@vetpet:consultas", JSON.stringify([...parse, item]));
+}
+
+function getLocalStorage() {
+  const localStorageData = localStorage.getItem("@vetpet:consultas") || [];
+
+  if (localStorageData.length === 0) {
+    return [];
+  }
+
+  return JSON.parse(localStorageData);
 }
 
 function otherAnimal() {
