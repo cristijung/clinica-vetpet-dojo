@@ -139,9 +139,13 @@ function getLocalStorage() {
   }
 
   return JSON.parse(localStorageData).map((item) => {
+
+    const date = new Date(item.date);
+    date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
+
     return {
       ...item,
-      date: new Date(item.date).toLocaleDateString("pt-BR"),
+      date: date.toLocaleDateString("pt-BR")
     };
   });
 }
