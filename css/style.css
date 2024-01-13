@@ -109,22 +109,31 @@ main section {
 
 .section-services {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .section-services h3 {
   margin-bottom: 1.5rem;
 }
 
-.div-services {
-  width: 500px;
+.section-services > .div-services {
+  width: 400px;
+}
+
+.section-services > div {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .cards-advantages {
   display: flex;
   flex-direction: row;
-  width: fit-content;
+  gap: 1rem;
 }
 
 .cards-advantages div {
