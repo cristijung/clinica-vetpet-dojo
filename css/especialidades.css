@@ -1,11 +1,10 @@
-main h1 {
+.text-specialities{
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-
+  margin-top: 3em !important;
   margin: 1rem;
 }
-
 .especialidades-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 240px);
@@ -54,4 +53,19 @@ main h1 {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+}
+
+
+.btn-card-custom {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radii-small);
+  border: none;
+  color: var(--text-white);
+}
+
+.btn-card-custom:hover {
+  background-color: green;
+  border-color: green;
 }
