@@ -72,6 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
   addOtherAnimalListener();
   addOtherMedicListener();
   renderMedics();
+  renderCalendar();
+  // console.log(renderCalendar());
 });
 
 function addOtherAnimalListener() {
@@ -117,7 +119,7 @@ function onSubmit(event) {
 }
 
 function updateLocalStorage(item) {
-  const localStorageData = localStorage.getItem("@vetpet:consultas") || [];
+  const localStorageData = localStorage.getItem("@vetpet:consultas") || "[]";
 
   if (localStorageData.length === 0) {
     localStorage.setItem("@vetpet:consultas", JSON.stringify([item]));
@@ -126,6 +128,8 @@ function updateLocalStorage(item) {
   const parse = JSON.parse(localStorageData);
 
   localStorage.setItem("@vetpet:consultas", JSON.stringify([...parse, item]));
+
+  renderCalendar();
 }
 
 function getLocalStorage() {
@@ -136,6 +140,22 @@ function getLocalStorage() {
   }
 
   return JSON.parse(localStorageData);
+}
+
+function renderCalendar(){
+  const dataQuerys = getLocalStorage();
+
+  const sectionData = document.getElementById("specific-query");
+  sectionData.innerHTML = "";
+
+  dataQuerys.map((item) => {
+    const query = document.createElement("div");
+    query.classList.add("card-query");
+
+    query.innerHTML = "aa";
+
+    sectionData.appendChild(query);
+  })
 }
 
 function otherAnimal() {
