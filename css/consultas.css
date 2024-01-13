@@ -5,6 +5,10 @@
   margin: 1rem auto;
 }
 
+.presentation-img {
+  width: 100%;
+}
+
 .presentation-description p {
   text-align: center;
 }
@@ -17,13 +21,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .custom-card-presentation {
   padding: 1rem;
   background-color: transparent;
   border: solid 3px var(--secondary);
-  max-width: 30%;
+  min-width: 18.75rem;
+  flex: 1;
 }
 
 .custom-card-header-presentation h3,
@@ -36,10 +42,16 @@ p {
 }
 
 .custom-container-form {
-  background-color: var(--accent);
+  border: solid 3px var(--secondary);
   margin: 2.5rem auto;
-  padding: 1rem;
+  padding: 4rem;
   border-radius: var(--radii-medium);
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .custom-form-group {
@@ -54,4 +66,13 @@ p {
 .custom-form-item {
   flex: 1;
   flex-basis: 9.375rem;
+}
+
+.custom-btn-form-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.custom-btn-form {
 }
