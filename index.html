@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Clínica VetPet</title>
+  <title>Clínica PetClinic</title>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
@@ -50,11 +50,11 @@
 
   <main>
     <section class="container">
-      <img class="d-block w-100 hero-img" src="./assets/pexels-tima-miroshnichenko-6235233.jpg"
+      <img class="hero-img" src="./assets/pexels-tima-miroshnichenko-6235233.jpg"
         alt="Doutor examinando um doguinho dodoi">
       <div class="text-center">
         <h1 class="h2">Bem-vindo à PetClinic - Cuidando com Amor e Profissionalismo!</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, explicabo.</p>
+        <p>Bem-vindo à nossa clínica, o lugar onde o cuidado e a saúde do seu animal de estimação são as nossas maiores prioridades. Aqui, estamos dedicados a proporcionar cuidados veterinários de alta qualidade e compassivos para garantir o bem-estar dos seus queridos animais.</p>
       </div>
     </section>
     <section class="container">
@@ -62,30 +62,26 @@
         <div class="card card-custom">
           <img src="./assets/img-gatinho.png" class="card-img-top card-image card-image-custom" alt="...">
           <div class="card-body">
-            <strong class="card-title"></strong>
-            <span class="card-subtitle mb-2 text-body-secondary d-block">Gatos</span>
-
+            <strong class="card-title">Gatos</strong>
             <p class="card-text">Temos o melhor tratamento para gatos
             </p>
 
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-              data-bs-target="#modalCienciaComputacao">
-              Mais informações
+            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal"
+              data-bs-target="#">
+              Saiba mais
             </button>
           </div>
         </div>
         <div class="card card-custom">
           <img src="./assets/img-cachorro.png" class="card-img-top card-image card-image-custom" alt="...">
           <div class="card-body">
-            <strong class="card-title"></strong>
-            <span class="card-subtitle mb-2 text-body-secondary d-block">Cachorro</span>
-
+            <strong class="card-title">Cachorros</strong>
             <p class="card-text">Temos o melhor tratamento para cachorros
             </p>
 
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-              data-bs-target="#modalCienciaComputacao">
-              Mais informações
+            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal"
+              data-bs-target="#">
+              Saiba mais
             </button>
           </div>
         </div>
@@ -97,24 +93,23 @@
             <p class="card-text">Temos o melhor tratamento para roedores
             </p>
 
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-              data-bs-target="#modalCienciaComputacao">
-              Mais informações
+            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal"
+              data-bs-target="#">
+              Saiba mais
             </button>
           </div>
         </div>
         <div class="card card-custom">
-          <img src="./assets/img-tartaruga.png" class="card-img-top card-image card-image-custom" alt="...">
+          <img src="./assets/img-tartaruga-nova.png" class="card-img-top card-image card-image-custom" alt="...">
           <div class="card-body">
-            <strong class="card-title">Tartaruga</strong>
+            <strong class="card-title">Répteis</strong>
 
             <div>
-              <p class="card-text">Temos o melhor tratamento para tartaruga
-              </p>
+              <p class="card-text">Temos o melhor tratamento para répteis</p>
 
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#modalCienciaComputacao">
-                Mais informações
+              <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal"
+                data-bs-target="#">
+                Saiba mais
               </button>
             </div>
           </div>
@@ -122,30 +117,31 @@
       </div>
     </section>
 
-    <section class="container my-5">
-      <div class="container mt-5">
+    <section class="container section-about-us">
+      <div class="container">
 
         <div class="row about-us-container">
           <div class="col-md-4 image-about">
             <img src="assets/image-sabout.avif">
           </div>
           <div class="col-md-8 d-flex flex-column align-items-center">
-            <h3 class="align-self-start">About Our Clinic</h3>
-            <p class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium eos expedita
-              soluta nobis, natus, odit porro voluptatum praesentium sed facilis assumenda! Ducimus ad quisquam
-              adipisci. Provident reprehenderit delectus nesciunt exercitationem.</p>
+            <h3 class="align-self-start">Sobre nós</h3>
+            <p class="">Nossa equipe de veterinários altamente qualificados é apaixonada por animais e está comprometida em oferecer serviços especializados para atender às necessidades individuais de cada paciente. Seja para consultas de rotina, tratamentos médicos ou cirurgias, estamos aqui para oferecer cuidados abrangentes e personalizados.</p>
 
             <div class="d-flex justify-content-end w-100">
-              <button class="btn btn-success ">Leia Mais</button>
+              <button class="btn btn-success custom-button">Leia Mais</button>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="container d-flex ">
-      <div class="col-md-6">
+
+    <section class="container section-services">
+      <div class="div-services">
+
         <h3>Our Advantages</h3>
-        <div class="d-flex gap-5">
+        <div class="cards-advantages">
+
           <div>
             <span
               class="border border-secondary rounded-circle d-flex align-items-center justify-content-center fs-2 text-danger"
@@ -153,6 +149,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, voluptates?</p>
             <a href="">Learn More</a>
           </div>
+
           <div>
             <span
               class="border border-secondary rounded-circle d-flex align-items-center justify-content-center fs-2 text-danger"
@@ -160,9 +157,12 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, voluptates?</p>
             <a href="">Learn More</a>
           </div>
+
         </div>
+
       </div>
-      <div class="col-md-4">
+      
+      <div>
         <h3>Our Services</h3>
         <ul>
           <li>Lorem ipsum dolor sit.</li>
@@ -173,10 +173,11 @@
         </ul>
       </div>
 
-      <div class="col-md-2 ">
+      <div>
         <h3>Testimonials</h3>
         <img src="https://placeholder.com/200x200" alt="">
       </div>
+
     </section>
   </main>
 
