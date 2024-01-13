@@ -28,7 +28,27 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   max-width: 20rem;
   min-width: 10rem;
+  position: relative;
+  height: 440px;
 }
+
+.btn-card-custom {
+    position: absolute;
+    bottom: 1.5rem;
+    left: calc(50% - 86px);
+    background-color: var(--primary);
+    border-color: var(--primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radii-small);
+    border: none;
+    color: var(--text-white);
+}
+
+.btn-card-custom:hover {
+    background-color: green;
+    border-color: green;
+}
+
 .card-custom-exams span{
   font-size: 1.2rem;
   color: var(--primary);

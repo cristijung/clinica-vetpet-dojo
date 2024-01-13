@@ -7,15 +7,15 @@
   <title>Clínica VetPet</title>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../css/exames.css">
   <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/exames.css">
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top" aria-label="Barra de Navegação do Cabeçalho">
       <div class="container">
-        <a class="navbar-brand" href="../index.html"><i class="ph ph-paw-print"></i><strong>Pet</strong>Clinic</a>
+        <a class="navbar-brand" href="../index.html"><i class="ph ph-paw-print"></i><strong>Pet</strong>Vet</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -46,14 +46,7 @@
     </nav>
   </header>
 
-
-
-
-
-  <div class="hero-exams">
-
-  </div>
-
+  <div class="hero-exams"></div>
 
   <section class="section-exams">
 
@@ -72,16 +65,33 @@
           <p class="card-text">Utilizamos radiografias para obter imagens detalhadas dos ossos e órgãos internos. Esse exame é crucial para diagnosticar fraturas, identificar anormalidades ósseas e avaliar a saúde dos órgãos internos.
           </p>
 
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCienciaComputacao">
+          <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#raio-x">
             Mais informações
           </button>
-        </div>
+
+          <div class="modal fade" id="raio-x" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Radiografia (Raio-X)</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    A radiografia, ou raio-x, é um exame de imagem que utiliza radiação para criar imagens detalhadas do interior do corpo. Na VetPet, este exame é frequentemente utilizado para diagnosticar fraturas, identificar anormalidades ósseas e avaliar a saúde dos órgãos internos. As radiografias são especialmente úteis em casos de lesões traumáticas, problemas ortopédicos e para examinar órgãos como pulmões, coração, fígado e intestinos.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
       </div>
 
-
-
       <div class="card card-custom-exams">
-        <img src="../assets/ultrassonografia.webp"" class=" card-img-top card-image card-image-custom" alt="...">
+        <img src="../assets/ultrassonografia.webp" class=" card-img-top card-image card-image-custom" alt="...">
         <div class="card-body">
 
           <span class="">Ultrassonografia</span>
@@ -89,9 +99,28 @@
           <p class="card-text">A ultrassonografia é uma ferramenta valiosa para avaliar órgãos internos, como o coração, fígado, rins e sistema reprodutivo. Proporciona imagens em tempo real e é fundamental para diagnósticos mais precisos.
           </p>
 
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCienciaComputacao">
+          <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#ultrassonografia">
             Mais informações
           </button>
+
+          <div class="modal fade" id="ultrassonografia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Ultrassonografia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    A ultrassonografia é uma técnica não invasiva que utiliza ondas sonoras de alta frequência para criar imagens em tempo real dos órgãos internos. Na VetPet, empregamos a ultrassonografia para avaliar o coração, fígado, rins e sistema reprodutivo. Este exame é valioso para identificar alterações na estrutura e textura dos órgãos, ajudando no diagnóstico de condições como tumores, cistos, gestações e problemas renais.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -104,13 +133,30 @@
           <p class="card-text">Esse exame especializado foca especificamente no coração, permitindo a avaliação detalhada da estrutura cardíaca, funcionamento das válvulas e fluxo sanguíneo. Auxilia no diagnóstico de condições cardíacas.
           </p>
 
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCienciaComputacao">
+          <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#ecocardiografia">
             Mais informações
           </button>
+
+          <div class="modal fade" id="ecocardiografia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Ecocardiografia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    A ecocardiografia é um exame de ultrassom especializado que se concentra exclusivamente no coração. Este procedimento fornece imagens detalhadas da anatomia cardíaca, permitindo a avaliação minuciosa das câmaras cardíacas, válvulas e do fluxo sanguíneo. Na VetPet, a ecocardiografia é crucial para diagnosticar e monitorar condições cardíacas, como doenças valvulares, cardiomiopatias e defeitos congênitos.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-
 
       <div class="card card-custom-exams">
         <img src="../assets/eletro.webp" class="card-img-top card-image card-image-custom" alt="...">
@@ -121,12 +167,30 @@
           <p class="card-text">Esse exame especializado foca especificamente no coração, permitindo a avaliação detalhada da estrutura cardíaca, funcionamento das válvulas e fluxo sanguíneo. Auxilia no diagnóstico de condições cardíacas.
           </p>
 
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCienciaComputacao">
+          <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#eletrocardiografia">
             Mais informações
           </button>
+
+          <div class="modal fade" id="eletrocardiografia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Eletrocardiografia (ECG)</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    O ECG é um exame que registra a atividade elétrica do coração ao longo do tempo. Este procedimento é essencial para diagnosticar arritmias, bloqueios cardíacos e outros distúrbios elétricos no coração. Na VetPet, o ECG é parte integrante da avaliação cardíaca, proporcionando informações precisas sobre a função elétrica do coração e auxiliando no planejamento de tratamentos específicos.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
 
       <div class="card card-custom-exams">
         <img src="../assets/exames.webp" class="card-img-top card-image card-image-custom" alt="...">
@@ -137,13 +201,30 @@
           <p class="card-text">Realizamos uma variedade de exames de sangue e urina para avaliar a saúde geral do seu animal. Isso inclui contagem completa de células sanguíneas, perfil bioquímico, avaliação de eletrólitos, entre outros.
           </p>
 
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCienciaComputacao">
+          <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#exames-laboratoriais">
             Mais informações
           </button>
+
+          <div class="modal fade" id="exames-laboratoriais" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Exames Laboratoriais</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    A VetPet oferece uma variedade de exames laboratoriais, incluindo contagem completa de células sanguíneas, perfil bioquímico e análise de urina. Esses exames fornecem informações detalhadas sobre a saúde geral do animal, avaliando a função dos órgãos, níveis de enzimas, eletrólitos e outros parâmetros importantes. Os resultados desses exames são fundamentais para o diagnóstico de condições como diabetes, insuficiência renal e hepática, e distúrbios hematológicos.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-
 
       <div class="card card-custom-exams">
         <img src="../assets/citologia.webp" class="card-img-top card-image card-image-custom" alt="...">
@@ -154,9 +235,31 @@
           <p class="card-text">A análise de células e tecidos é essencial para diagnosticar problemas dermatológicos, tumores e outras condições. Nossos especialistas garantem uma interpretação precisa para um plano de tratamento eficaz.
           </p>
 
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCienciaComputacao">
+          <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#citologia">
             Mais informações
           </button>
+
+          <div class="modal fade" id="citologia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Citologia e Histopatologia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    <strong>Citologia:</strong> Este exame envolve a coleta e análise de células, geralmente de lesões de pele ou nódulos. Na VetPet, a citologia é valiosa para diagnosticar problemas dermatológicos, identificar células cancerosas e determinar a natureza de massas ou inflamações.
+                  </p>
+                  <p>
+                    <strong>Histopatologia:</strong> Após a remoção cirúrgica de tecidos, a histopatologia analisa microscopicamente esses tecidos para avaliar a presença de anomalias celulares. Essencial para diagnosticar tumores e determinar a extensão da doença, a histopatologia orienta os planos de tratamento e prognósticos.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -169,9 +272,28 @@
           <p class="card-text">A endoscopia permite a visualização interna de órgãos, como trato gastrointestinal e vias respiratórias. É útil para diagnósticos precisos e procedimentos minimamente invasivos.
           </p>
 
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCienciaComputacao">
+          <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#endoscopia">
             Mais informações
           </button>
+
+          <div class="modal fade" id="endoscopia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Endoscopia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    A endoscopia é um procedimento minimamente invasivo que utiliza um tubo flexível com uma pequena câmera na ponta para visualizar o interior dos órgãos. Na VetPet, a endoscopia é frequentemente empregada para examinar o trato gastrointestinal e as vias respiratórias. Permite a detecção de inflamações, tumores, corpos estranhos e outras condições sem a necessidade de cirurgia invasiva.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -184,33 +306,76 @@
           <p class="card-text">Avaliamos a saúde do fígado e rins por meio de testes específicos, proporcionando uma compreensão abrangente da função desses órgãos vitais.
           </p>
 
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCienciaComputacao">
+          <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#renal">
             Mais informações
           </button>
+
+          <div class="modal fade" id="renal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Testes de Função Hepática e Renal</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    <strong>Função Hepática:</strong> A avaliação da função hepática na VetPet inclui testes que medem os níveis de enzimas hepáticas, bilirrubina e proteínas. Esses testes ajudam a diagnosticar e monitorar condições hepáticas, como hepatites e cirrose.
+                  </p>
+                  <p>
+                   <strong>Função Renal:</strong> Os testes renais na VetPet analisam a concentração de substâncias na urina e o nível de creatinina no sangue. São cruciais para diagnosticar e monitorar doenças renais, como insuficiência renal, infecções e cálculos.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
 
       <div class="card card-custom-exams">
         <img src="../assets/comportamental.webp" class="card-img-top card-image card-image-custom" alt="...">
         <div class="card-body">
 
-          <span class="">Consulta Comportamental</span>
+          <span class="">Teste de Dirofilariose</span>
 
-          <p class="card-text">Avaliação e tratamento de problemas comportamentais.
+          <p class="card-text">Avaliação para diagnosticar a presença do parasita Dirofilaria immitis. Este teste é crucial para animais que vivem em áreas onde mosquitos transmissores são prevalentes.
           </p>
 
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCienciaComputacao">
+          <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#dirofilariose">
             Mais informações
           </button>
+
+          <div class="modal fade" id="dirofilariose" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Teste de Dirofilariose</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    <strong>Dirofilaria immitis (Vermes do Coração):</strong> Transmitidos por mosquitos infectados, os vermes do coração podem causar sérios problemas de saúde em cães e gatos. O teste de dirofilariose na VetPet é realizado através da coleta de uma pequena amostra de sangue, que é analisada para detectar antígenos específicos produzidos pelos vermes adultos.
+                  </p>
+                  <p>
+                    <strong>Importância do Teste:</strong> A dirofilariose pode levar a problemas cardíacos graves, insuficiência cardíaca e, em casos extremos, à morte do animal. O teste é fundamental para identificar a presença precoce do parasita, permitindo a intervenção antes que a doença atinja estágios avançados.
+                  </p>
+                  <p>
+                    <strong>Recomendações:</strong> Recomenda-se que o teste seja realizado anualmente, especialmente em áreas endêmicas. Além disso, para animais que viajam para regiões com maior prevalência da doença, é aconselhável realizar o teste antes e após a viagem.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-
     </div>
-
   </section>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
