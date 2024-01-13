@@ -35,9 +35,23 @@ p {
   /* Body do card */
 }
 
-.custom-container-form{
+.custom-container-form {
   background-color: var(--accent);
   margin: 2.5rem auto;
   padding: 1rem;
   border-radius: var(--radii-medium);
+}
+
+.custom-form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-flow: row wrap;
+}
+
+.custom-form-item {
+  flex: 1;
+  flex-basis: 9.375rem;
 }
