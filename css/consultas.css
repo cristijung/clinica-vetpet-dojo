@@ -40,6 +40,49 @@ p {
 .custom-card-body-presentation {
   /* Body do card */
 }
+.custom-calendar {
+  margin-bottom: 3rem;
+}
+
+.queries-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  .card-query {
+    display: flex;
+    padding: 0 1rem 1rem 1rem;
+    width: 25%;
+    flex-basis: 200px;
+    border: solid 3px var(--secondary);
+    color: var(--text-white);
+    background-color: transparent;
+    align-items: center;
+    color: var(--text-white);
+    h4 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--secondary);
+      width: fit-content;
+      padding: 0.5rem;
+      border-radius: 0 0 var(--radii-medium) var(--radii-medium);
+    }
+    .card-query-date {
+      font-size: medium;
+      color: #3838389e;
+    }
+    .card-query-body p {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background-color: var(--accent);
+      padding: 0.5rem;
+      border-radius: var(--radii-medium);
+      color: var(--text-white);
+    }
+  }
+}
 
 .custom-container-form {
   border: solid 3px var(--secondary);

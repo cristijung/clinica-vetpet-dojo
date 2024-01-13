@@ -73,7 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
   addOtherMedicListener();
   renderMedics();
   renderCalendar();
-  // console.log(renderCalendar());
 });
 
 function addOtherAnimalListener() {
@@ -139,10 +138,14 @@ function getLocalStorage() {
     return [];
   }
 
-  return JSON.parse(localStorageData);
+  return JSON.parse(localStorageData).map((item) => {
+    return {
+      ...item,
+      date: new Date(item.date).toLocaleDateString("pt-BR"),
+    };
+  });
 }
-
-function renderCalendar(){
+function renderCalendar() {
   const dataQuerys = getLocalStorage();
 
   const sectionData = document.getElementById("specific-query");
@@ -151,11 +154,19 @@ function renderCalendar(){
   dataQuerys.map((item) => {
     const query = document.createElement("div");
     query.classList.add("card-query");
-
-    query.innerHTML = "aa";
+    query.classList.add("card");
+    query.innerHTML = `
+      <h4><i class="ph ph-smiley"></i> ${item.clientName}</h4>
+      <p class="card-query-date"><i class="ph ph-calendar"></i> ${item.date}</p>
+      <div class="card-query-body">
+        <p ><i class="ph ph-cat"></i> ${item.animal}</p>
+        <p><i class="ph ph-pulse"></i> ${item.specialty}</p>
+        <p><i class="ph ph-stethoscope"></i> ${item.doctor}</p>
+      </div>
+    `;
 
     sectionData.appendChild(query);
-  })
+  });
 }
 
 function otherAnimal() {
