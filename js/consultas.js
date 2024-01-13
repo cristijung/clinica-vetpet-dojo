@@ -16,6 +16,36 @@ function renderSpecialties() {
   document.getElementById("specialty").innerHTML = options;
 }
 
+function renderMedics() {
+  const medics = [
+    { specialty: "Nutricionista", name: "Dr. João" },
+    { specialty: "Nutricionista", name: "Dra. Ana" },
+    { specialty: "Nutricionista", name: "Dr. Carlos" },
+    { specialty: "Neurologia", name: "Dra. Maria" },
+    { specialty: "Neurologia", name: "Dr. Pedro" },
+    { specialty: "Neurologia", name: "Dra. Sofia" },
+    { specialty: "Ortopedia", name: "Dr. André" },
+    { specialty: "Ortopedia", name: "Dra. Laura" },
+    { specialty: "Ortopedia", name: "Dr. Gabriel" },
+    { specialty: "Cardiologia", name: "Dra. Camila" },
+    { specialty: "Cardiologia", name: "Dr. Lucas" },
+    { specialty: "Cardiologia", name: "Dra. Rafaela" },
+    { specialty: "Clínico Geral", name: "Dr. Marcos" },
+    { specialty: "Clínico Geral", name: "Dra. Juliana" },
+    { specialty: "Clínico Geral", name: "Dr. Fernanda" },
+  ].filter(
+    (medic) => medic.specialty === document.getElementById("specialty").value
+  );
+
+  const options = medics
+    .map((medic) => {
+      return `<option value="${medic.name}">${medic.name} - ${medic.specialty}</option>`;
+    })
+    .join();
+
+  document.getElementById("doctor").innerHTML = options;
+}
+
 function renderAnimals() {
   const animals = [
     "Cachorro",
@@ -39,14 +69,43 @@ function renderAnimals() {
 document.addEventListener("DOMContentLoaded", () => {
   renderAnimals();
   renderSpecialties();
-  otherAnimal();
+  addOtherAnimalListener();
+  addOtherMedicListener();
+  renderMedics();
 });
+
+function addOtherAnimalListener() {
+  const otherAnimalSelect = document.getElementById("animal-select");
+  otherAnimalSelect.addEventListener("change", (event) => {
+    const selectedAnimal = event.target.value;
+
+    if (selectedAnimal === "Outro") {
+      otherAnimal();
+    } else {
+      const otherAnimalInput = document.getElementById("other-animal-div");
+      otherAnimalInput.remove();
+    }
+  });
+}
+
+function addOtherMedicListener() {
+  const otherSpecialitySelect = document.getElementById("specialty");
+  otherSpecialitySelect.addEventListener("change", (event) => {
+    renderMedics();
+  });
+}
+
+function onSubmit(event) {
+  event.preventDefault();
+  // Validações aqui
+}
 
 function otherAnimal() {
   const animalDiv = document.getElementById("animal-form-group");
 
   const div = document.createElement("div");
   div.classList.add("custom-form-item");
+  div.id = "other-animal-div";
 
   const label = document.createElement("label");
   label.setAttribute("for", "other-animal");
