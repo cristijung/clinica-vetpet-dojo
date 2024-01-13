@@ -1,149 +1,280 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Clínica VetPet</title>
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/especialidades.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar bg-body-tertiary fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"
-            ><i class="ph ph-paw-print mx-3"></i><strong>Pet</strong>Clinic</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-end"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                <i class="ph ph-paw-print mx-3"></i
-                ><a><strong>Pet</strong>Clinic</a>
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clínica VetPet</title>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/especialidades.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><i class="ph ph-paw-print mx-3"></i><strong>Pet</strong>Clinic</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <i class="ph ph-paw-print mx-3"></i><a><strong>Pet</strong>Clinic</a>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item"></li>
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/consultas.html">Consultas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/exames.html">Exames</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Nossas Especialidades</h1>
+    <section class="container-fluid especialidades-container">
+
+      <div class="modal fade" id="generalPractitioner" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Clínica Geral</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item"></li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../pages/consultas.html"
-                    >Consultas</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../pages/exames.html">Exames</a>
-                </li>
-              </ul>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
             </div>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+      <div class="especialidade">
+        <i class="ph ph-clipboard"></i>
+        <p>Clínico Geral</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#generalPractitioner">
+          Ver mais
+        </button>
+      </div>
 
-    <main>
-      <h1>Nossas Especialidades</h1>
-      <section class="container-fluid especialidades-container">
-        <div class="especialidade">
-          <i class="ph ph-clipboard"></i>
-          <p>Clínica Geral</p>
-        </div>
-        <div class="especialidade">
-          <i class="ph ph-brain"></i>
-          <p>Nefrologia e Urologia</p>
-        </div>
-        <div class="especialidade">
-          <i class="ph ph-bone"></i>
-          <p>Ortopedia</p>
-        </div>
-        <div class="especialidade">
-          <i class="ph ph-heart"></i>
-          <p>Cardiologia</p>
-        </div>
-        <div class="especialidade">
-          <i class="ph ph-bowl-food"></i>
-          <p>Nutricionista</p>
-        </div>
-        <div class="especialidade">
-          <i class="ph ph-paw-print"></i>
-          <p>Dermatologia</p>
-        </div>
-        <div class="especialidade">
-          <i class="ph ph-monitor"></i>
-          <p>Diagnóstico por Imagem</p>
-        </div>
-        <div class="especialidade">
-          <i class="ph ph-lightbulb"></i>
-          <p>Neurologia</p>
-        </div>
-      </section>
-    </main>
-
-    <footer class="bg-primary p-3">
-      <section class="container d-flex flex-wrap">
-        <div class="col-md-4">
-          <h3 class="text-light mb-4">Our Location</h3>
-          <div>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.408814811345!2d-51.20387612364745!3d-29.996415629052485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977775fc4c071%3A0x6de693cbd6b0b5e5!2sDBC!5e0!3m2!1spt-BR!2sbr!4v1705090856925!5m2!1spt-BR!2sbr"
-              width="350"
-              height="200"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+      <div class="modal fade" id="nephrologyAndUrology" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Nefrologia e Urologia</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+            </div>
           </div>
         </div>
-        <div class="col-md-4 text-light">
-          <h3 class="text-light mb-4">Get In Touch</h3>
-          <p>Tv. São José, 455 - Navegantes, Porto Alegre - RS</p>
-          <p>+55 (51) 9 9999-9999</p>
+      </div>
+      <div class="especialidade">
+        <i class="ph ph-brain"></i>
+        <p>Nefrologia e Urologia</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#nephrologyAndUrology">
+          Ver mais
+        </button>
+      </div>
+
+      <div class="modal fade" id="orthopedics" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Ortopedia</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
         </div>
-        <div class="col-md-4 text-light">
-          <h3 class="mb-4">Useful Links</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="especialidade">
+        <i class="ph ph-bone"></i>
+        <p>Ortopedia</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#orthopedics">
+          Ver mais
+        </button>
+      </div>
+
+      <div class="modal fade" id="cardiology" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Cardiologia</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
         </div>
-      </section>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      </div>
+      <div class="especialidade">
+        <i class="ph ph-heart"></i>
+        <p>Cardiologia</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cardiology">
+          Ver mais
+        </button>
+      </div>
+
+      <div class="modal fade" id="nutritionist" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Nutricionista</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="especialidade">
+        <i class="ph ph-bowl-food"></i>
+        <p>Nutricionista</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#nutritionist">
+          Ver mais
+        </button>
+      </div>
+
+      <div class="modal fade" id="dermatology" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="nutritionist">Dermatologia</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="especialidade">
+        <i class="ph ph-paw-print"></i>
+        <p>Dermatologia</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dermatology">
+          Ver mais
+        </button>
+      </div>
+
+      <div class="modal fade" id="diagnosticByImage" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Diagnóstico por Imagem</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="especialidade">
+        <i class="ph ph-monitor"></i>
+        <p>Diagnóstico por Imagem</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#diagnosticByImage">
+          Ver mais
+        </button>
+      </div>
+
+      <div class="modal fade" id="neurology" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Neurologia</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="especialidade">
+        <i class="ph ph-lightbulb"></i>
+        <p>Neurologia</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#neurology">
+          Ver mais
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-primary p-3">
+    <section class="container d-flex flex-wrap">
+      <div class="col-md-4">
+        <h3 class="text-light mb-4">Our Location</h3>
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.408814811345!2d-51.20387612364745!3d-29.996415629052485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977775fc4c071%3A0x6de693cbd6b0b5e5!2sDBC!5e0!3m2!1spt-BR!2sbr!4v1705090856925!5m2!1spt-BR!2sbr"
+            width="350" height="200" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="col-md-4 text-light">
+        <h3 class="text-light mb-4">Get In Touch</h3>
+        <p>Tv. São José, 455 - Navegantes, Porto Alegre - RS</p>
+        <p>+55 (51) 9 9999-9999</p>
+      </div>
+      <div class="col-md-4 text-light">
+        <h3 class="mb-4">Useful Links</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </section>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
