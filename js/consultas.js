@@ -145,6 +145,7 @@ function getLocalStorage() {
     };
   });
 }
+
 function renderCalendar() {
   const dataQuerys = getLocalStorage();
 
