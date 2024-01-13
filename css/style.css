@@ -109,7 +109,7 @@ main section {
 
 .section-services {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
 }
@@ -126,7 +126,7 @@ main section {
   width: 240px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
