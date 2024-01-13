@@ -93,18 +93,38 @@
 
     <section class="container">
       <form class="custom-container-form">
-        <label class="form-label" for="client-name">Nome do cliente:</label>
-        <input type="text" id="client-name" class="form-control w-75">
+        <div class="custom-form-group">
+           <div class="custom-form-item">
+            <label class="form-label" for="client-name" required>Nome do Cliente*:</label>
+            <input type="text" id="client-name" class="form-control">
+           </div>
 
-        <select class="form-select my-5" >
-          
-        </select>
+           <div class="custom-form-item">
+              <label class="form-label" for="client-tel" required>Telefone Whatsapp*:</label>
+            <input type="text" id="client-tel" class="form-control">
+            </div>
+        </div>
 
-        <select class="form-select my-5" >
-          
-        </select>
+      <div class="custom-form-group mt-3">
+        <div class="custom-form-item">
+          <label class="form-label" for="specialty">Especialidade</label>
+          <select class="form-select" id="specialty">
+          </select>
+         </div>
+  
+         <div class="custom-form-item">
+          <label class="form-label" for="doctor">Médico Veterinário</label>
+          <select class="form-select" name="doctor" id="doctor">
+          </select>
+         </div>
 
-        <input type="date" name="" id="date-query" class="w-25 form-control">
+         <div class="custom-form-item">
+          <label for="date-query">Horários Disponíveis</label>
+          <input type="date" name="date-query" id="date-query" class="form-control">
+         </div>
+      </div>
+
+      
 
         <select class="form-select mt-5" >
           
