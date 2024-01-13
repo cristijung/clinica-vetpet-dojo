@@ -39,6 +39,7 @@ function renderAnimals() {
 document.addEventListener("DOMContentLoaded", () => {
   renderAnimals();
   renderSpecialties();
+  otherAnimal();
 });
 
 function otherAnimal() {
@@ -50,6 +51,7 @@ function otherAnimal() {
   const label = document.createElement("label");
   label.setAttribute("for", "other-animal");
   label.classList.add("form-label");
+  label.innerText = "Qual?";
 
   const input = document.createElement("input");
   input.setAttribute("type", "text");
