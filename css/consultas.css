@@ -34,14 +34,12 @@
   flex: 1;
 }
 
-.custom-card-header-presentation h3,
-p {
+.custom-card-header-presentation h3, 
+.custom-card-header-presentation p,
+.custom-card-body-presentation p {
   color: var(--primary);
 }
 
-.custom-card-body-presentation {
-  /* Body do card */
-}
 .custom-calendar {
   margin-bottom: 3rem;
 }
