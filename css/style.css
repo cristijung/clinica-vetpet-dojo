@@ -11,7 +11,7 @@ main section {
   margin: 0 auto;
 } */
 
-.button-change-image-container{
+.button-change-image-container {
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -20,7 +20,7 @@ main section {
   margin: 0 auto;
   padding: 4px;
 }
-.button-change-image-container input[type=radio] {
+.button-change-image-container input[type="radio"] {
   display: none;
 }
 
@@ -45,7 +45,7 @@ main section {
   border-radius: 50%;
 }
 
-.button-change-image-container input[type=radio]:checked + .custom-radio {
+.button-change-image-container input[type="radio"]:checked + .custom-radio {
   background-color: var(--primary);
 }
 
@@ -59,7 +59,7 @@ main section {
   margin-bottom: 2rem;
 }
 
-.container-welcome{
+.container-welcome {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -68,15 +68,15 @@ main section {
   border-bottom: 1px solid var(--primary);
 }
 
-.container-welcome strong{
+.container-welcome strong {
   color: var(--primary);
 }
 
-.container-welcome h1{
+.container-welcome h1 {
   font-size: 3rem;
 }
 
-.container-welcome p{
+.container-welcome p {
   font-size: 1.25rem;
 }
 
@@ -91,6 +91,14 @@ main section {
   text-align: center;
   background-color: var(--accent);
   color: var(--text-white);
+}
+
+.card-title-custom{
+  font-size: 1.5rem;
+}
+
+.card-text-custom{
+  font-size: 1.1rem;
 }
 
 .card-image-custom {
@@ -125,9 +133,41 @@ main section {
   border-color: var(--bg-color);
 }
 
-/* .section-about-us {
+.custom-button-card:active {
+  background-color: var(--secondary) !important;
+  border-color: var(--bg-color) !important;
+}
 
-} */
+.modal-header-custom {
+  background-color: var(--primary);
+  padding-inline: 2rem;
+}
+
+.modal-title-custom {
+  color: var(--text-white);
+  font-size: 1.75rem;
+}
+
+.custom-modal-body {
+  padding-inline: 2rem;
+  background-color: var(--bg-color);
+  border-radius: var(--radii-medium);
+}
+
+.modal-img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-paragraph {
+  font-size: 1.25rem;
+  text-align: justify;
+}
+
+.modal-subtitle {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
 
 .about-us-container {
   display: grid;
@@ -136,7 +176,7 @@ main section {
   justify-content: space-evenly;
 }
 
-.image-container{
+.image-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,9 +237,7 @@ main section {
 
 .cards-advantages {
   display: flex;
-  flex-direction: row;
   gap: 1rem;
-
 }
 
 .card-advantage-circle {
@@ -223,17 +261,30 @@ main section {
   gap: 0.5rem;
 }
 
-@media (max-width: 768px){
-  .cards{
+@media (max-width: 768px) {
+  .cards {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .section-services{
+  .section-services {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 4rem;
+  }
+
+  .cards-advantages{
+    flex-direction: column;
+  }
+
+  .div-services{
+    max-width: 100%;
+  }
+
+  .modal-paragraph{
+    line-height: 1.3rem;
+    font-size: 1rem;
   }
 }
