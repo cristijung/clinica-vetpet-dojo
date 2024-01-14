@@ -6,6 +6,12 @@ main section {
   margin-bottom: 6rem;
 }
 
+header .custom-header {
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.423);
+  -webkit-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.423);
+  -moz-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.423);
+}
+
 .button-change-image-container {
   display: flex;
   justify-content: center;
