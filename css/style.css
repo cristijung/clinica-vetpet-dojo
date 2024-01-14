@@ -179,19 +179,23 @@ main section {
   font-weight: 400;
 }
 
-.about-us-info button {
+.about-us-info button{
   width: 7rem;
   float: inline-end;
   background-color: var(--primary);
   border-color: var(--primary);
   border-radius: var(--radii-medium);
-  color: var(--text-white);
   font-weight: 500;
 }
 
+.about-us-info a {
+  text-decoration: none;
+  color: var(--text-white);
+  display: block;
+}
+
 .about-us-info button:hover {
-  background-color: var(--bg-color);
-  border: 1px solid var(--primary);
+  background-color: var(--secondary);
 }
 
 .advantages-container {

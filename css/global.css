@@ -11,7 +11,7 @@
   --radii-small: 4px;
 }
 
-.navbar {
+.navbar, .offcanvas-custom {
   background-color: var(--primary);
   color: var(--text-white);
 }
@@ -80,3 +80,9 @@ iframe {
     align-items: center;
   }
 }
+
+.icon-custom {
+  display: flex;
+  align-items: center;
+}
+

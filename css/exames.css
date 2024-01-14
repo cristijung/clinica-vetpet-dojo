@@ -45,8 +45,7 @@
 }
 
 .btn-card-custom:hover {
-    background-color: green;
-    border-color: green;
+    background-color: var(--secondary);
 }
 
 .card-custom-exams span{
