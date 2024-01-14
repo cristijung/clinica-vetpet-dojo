@@ -71,14 +71,13 @@ main {
   .card-query {
     display: flex;
     padding: 0 1rem 1rem 1rem;
-    width: 25%;
+    min-width: 23%;
     flex-basis: 200px;
     border: solid 1px var(--secondary);
     color: var(--text-white);
     background-color: transparent;
     align-items: center;
     color: var(--text-white);
-
     h4 {
       display: flex;
       align-items: center;
@@ -92,13 +91,11 @@ main {
     .card-query-date {
       font-size: medium;
       color: #3838389e;
-
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
       font-weight: 500;
-
       > i {
         font-size: 1.5rem;
       }
