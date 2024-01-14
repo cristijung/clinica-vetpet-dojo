@@ -1,548 +1,374 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="página de especialidades veterinárias da clínica VetPet"
-    />
-    <meta
-      name="keywords"
-      content="especialidades, clínica veterinária, veterinários, animais"
-    />
-    <meta name="author" content="Turma Front-end VS13" />
 
-    <title>Clínica VetPet</title>
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/especialidades.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="página de especialidades veterinárias da clínica VetPet" />
+  <meta name="keywords" content="especialidades, clínica veterinária, veterinários, animais" />
+  <meta name="author" content="Turma Front-end VS13" />
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-md fixed-top custom-header header-text-white">
-        <div class="container">
-          <a class="navbar-brand" href="../index.html"
-            ><i class="ph ph-paw-print"></i>
-            <div><strong>Vet</strong>Pet</div>
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-end offcanvas-custom"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                <i class="ph ph-paw-print mx-3"></i
-                ><a><strong>Vet</strong>Pet</a>
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
+  <title>Clínica VetPet</title>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/especialidades.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md fixed-top custom-header header-text-white">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html"><i class="ph ph-paw-print"></i>
+          <div><strong>Vet</strong>Pet</div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <i class="ph ph-paw-print mx-3"></i><a><strong>Vet</strong>Pet</a>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item"></li>
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/consultas.html">Consultas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/exames.html">Exames</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="text-specialities">Nossas Especialidades</h1>
+    <section aria-label="seção contendo todas as especialidades da clínica"
+      class="container-fluid especialidades-container">
+      <div aria-label="modal com a descrição da especialidade - clínica geral" class="modal fade"
+        id="generalPractitioner" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header modal-header-custom">
+              <h2 class="modal-title modal-title-custom fs-5" id="staticBackdropLabel">
+                Clínico Geral
+              </h2>
+              <button type="button" aria-label="botão para fechar o modal da especialidade"
+                class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item"></li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../pages/consultas.html"
-                    >Consultas</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../pages/exames.html">Exames</a>
-                </li>
-              </ul>
+            <div class="modal-body">
+              Na Clínica Geral, oferecemos a base essencial para a saúde do
+              seu pet. Nossos veterinários dedicados fornecem consultas
+              regulares, vacinações e exames preventivos. Estamos
+              comprometidos em proporcionar uma vida longa e saudável para o
+              seu companheiro, cuidando de suas necessidades gerais de saúde.
             </div>
+            <div class="modal-footer"></div>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+      <div class="especialidade">
+        <i class="ph ph-clipboard"></i>
+        <p>Clínico Geral</p>
+        <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#generalPractitioner">
+          Ver mais
+        </button>
+      </div>
 
-    <main>
-      <h1 class="text-specialities">Nossas Especialidades</h1>
-      <section
-        aria-label="seção contendo todas as especialidades da clínica"
-        class="container-fluid especialidades-container"
-      >
-        <div
-          aria-label="modal com a descrição da especialidade - clínica geral"
-          class="modal fade"
-          id="generalPractitioner"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="staticBackdropLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header modal-header-custom">
-                <h2 class="modal-title modal-title-custom fs-5" id="staticBackdropLabel">
-                  Clínico Geral
-                </h2>
-                <button
-                  type="button"
-                  aria-label="botão para fechar o modal da especialidade"
-                  class="btn-close btn-close-white"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                Na Clínica Geral, oferecemos a base essencial para a saúde do
-                seu pet. Nossos veterinários dedicados fornecem consultas
-                regulares, vacinações e exames preventivos. Estamos
-                comprometidos em proporcionar uma vida longa e saudável para o
-                seu companheiro, cuidando de suas necessidades gerais de saúde.
-              </div>
-              <div class="modal-footer"></div>
+      <div aria-label="modal com a descrição da especialidade - nefrologia" class="modal fade" id="nephrologyAndUrology"
+        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header modal-header-custom">
+              <h2 class="modal-title modal-title-custom fs-5" id="staticBackdropLabel">
+                Nefrologia
+              </h2>
+              <button type="button" aria-label="botão para fechar o modal da especialidade"
+                class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          </div>
-        </div>
-        <div class="especialidade">
-          <i class="ph ph-clipboard"></i>
-          <p>Clínico Geral</p>
-          <button
-            type="button"
-            class="btn-card-custom"
-            aria-label="botão para acessar o modal da especialidade"
-            data-bs-toggle="modal"
-            data-bs-target="#generalPractitioner"
-          >
-            Ver mais
-          </button>
-        </div>
-
-        <div
-          aria-label="modal com a descrição da especialidade - nefrologia"
-          class="modal fade"
-          id="nephrologyAndUrology"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="staticBackdropLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header modal-header-custom">
-                <h2 class="modal-title modal-title-custom fs-5" id="staticBackdropLabel">
-                  Nefrologia
-                </h2>
-                <button
-                  type="button"
-                  aria-label="botão para fechar o modal da especialidade"
-                  class="btn-close btn-close-white"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                Em nossa equipe de Nefrologia e Urologia, nos especializamos em
-                diagnosticar e tratar problemas renais e urológicos. Realizamos
-                testes de função renal, tratamos infecções urinárias e
-                garantimos que seu pet receba cuidados específicos para manter
-                sua saúde urinária em perfeitas condições.
-              </div>
-              <div class="modal-footer"></div>
+            <div class="modal-body">
+              Em nossa equipe de Nefrologia e Urologia, nos especializamos em
+              diagnosticar e tratar problemas renais e urológicos. Realizamos
+              testes de função renal, tratamos infecções urinárias e
+              garantimos que seu pet receba cuidados específicos para manter
+              sua saúde urinária em perfeitas condições.
             </div>
+            <div class="modal-footer"></div>
           </div>
         </div>
-        <div class="especialidade">
-          <i class="ph ph-brain"></i>
-          <p>Nefrologia</p>
-          <button
-            type="button"
-            aria-label="botão para acessar o modal da especialidade"
-            class="btn-card-custom"
-            data-bs-toggle="modal"
-            data-bs-target="#nephrologyAndUrology"
-          >
-            Ver mais
-          </button>
-        </div>
+      </div>
+      <div class="especialidade">
+        <i class="ph ph-brain"></i>
+        <p>Nefrologia</p>
+        <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#nephrologyAndUrology">
+          Ver mais
+        </button>
+      </div>
 
-        <div
-          aria-label="modal com a descrição da especialidade - ortopedia"
-          class="modal fade"
-          id="orthopedics"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="staticBackdropLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header modal-header-custom">
-                <h2 class="modal-title modal-title-custom fs-5" id="staticBackdropLabel">
-                  Ortopedia
-                </h2>
-                <button
-                  type="button"
-                  aria-label="botão para fechar o modal da especialidade"
-                  class="btn-close btn-close-white"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                Na nossa especialidade de Ortopedia, cuidamos dos problemas
-                musculoesqueléticos do seu animal. Realizamos cirurgias
-                ortopédicas, tratamos fraturas e gerenciamos condições como
-                artrite. Nosso objetivo é restaurar a mobilidade e melhorar a
-                qualidade de vida do seu pet.
-              </div>
-              <div class="modal-footer"></div>
+      <div aria-label="modal com a descrição da especialidade - ortopedia" class="modal fade" id="orthopedics"
+        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header modal-header-custom">
+              <h2 class="modal-title modal-title-custom fs-5" id="staticBackdropLabel">
+                Ortopedia
+              </h2>
+              <button type="button" aria-label="botão para fechar o modal da especialidade"
+                class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          </div>
-        </div>
-        <div class="especialidade">
-          <i class="ph ph-bone"></i>
-          <p>Ortopedia</p>
-          <button
-            type="button"
-            class="btn-card-custom"
-            aria-label="botão para acessar o modal da especialidade"
-            data-bs-toggle="modal"
-            data-bs-target="#orthopedics"
-          >
-            Ver mais
-          </button>
-        </div>
-
-        <div
-          aria-label="modal com a descrição da especialidade - cardiologia "
-          class="modal fade"
-          id="cardiology"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="staticBackdropLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header modal-header-custom">
-                <h2 class="modal-title modal-title-custom fs-5" id="staticBackdropLabel">
-                  Cardiologia
-                </h2>
-                <button
-                  type="button"
-                  aria-label="botão para fechar o modal da especialidade"
-                  class="btn-close btn-close-white"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                Na Cardiologia Veterinária, diagnosticamos e tratamos doenças
-                cardíacas. Utilizamos técnicas avançadas para monitorar a saúde
-                cardiovascular do seu animal de estimação, garantindo que seu
-                coração esteja em ótimas condições para uma vida plena.
-              </div>
-              <div class="modal-footer"></div>
+            <div class="modal-body">
+              Na nossa especialidade de Ortopedia, cuidamos dos problemas
+              musculoesqueléticos do seu animal. Realizamos cirurgias
+              ortopédicas, tratamos fraturas e gerenciamos condições como
+              artrite. Nosso objetivo é restaurar a mobilidade e melhorar a
+              qualidade de vida do seu pet.
             </div>
+            <div class="modal-footer"></div>
           </div>
         </div>
-        <div class="especialidade">
-          <i class="ph ph-heart"></i>
-          <p>Cardiologia</p>
-          <button
-            type="button"
-            class="btn-card-custom"
-            aria-label="botão para acessar o modal da especialidade"
-            data-bs-toggle="modal"
-            data-bs-target="#cardiology"
-          >
-            Ver mais
-          </button>
-        </div>
+      </div>
+      <div class="especialidade">
+        <i class="ph ph-bone"></i>
+        <p>Ortopedia</p>
+        <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#orthopedics">
+          Ver mais
+        </button>
+      </div>
 
-        <div
-          aria-label="modal com a descrição da especialidade - nutricionista"
-          class="modal fade"
-          id="nutritionist"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="staticBackdropLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header modal-header-custom">
-                <h2 class="modal-title modal-title-custom fs-5" id="staticBackdropLabel">
-                  Nutricionista
-                </h2>
-                <button
-                  type="button"
-                  aria-label="botão para fechar o modal da especialidade"
-                  class="btn-close btn-close-white"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                Nossos Nutricionistas especializados criam planos alimentares
-                personalizados para atender às necessidades específicas do seu
-                pet. Promovemos uma dieta equilibrada para contribuir para sua
-                saúde geral, proporcionando um suporte nutricional adaptado às
-                suas necessidades individuais.
-              </div>
-              <div class="modal-footer"></div>
+      <div aria-label="modal com a descrição da especialidade - cardiologia " class="modal fade" id="cardiology"
+        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header modal-header-custom">
+              <h2 class="modal-title modal-title-custom fs-5" id="staticBackdropLabel">
+                Cardiologia
+              </h2>
+              <button type="button" aria-label="botão para fechar o modal da especialidade"
+                class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          </div>
-        </div>
-        <div class="especialidade">
-          <i class="ph ph-bowl-food"></i>
-          <p>Nutricionista</p>
-          <button
-            type="button"
-            class="btn-card-custom"
-            aria-label="botão para acessar o modal da especialidade"
-            data-bs-toggle="modal"
-            data-bs-target="#nutritionist"
-          >
-            Ver mais
-          </button>
-        </div>
-
-        <div
-          aria-label="modal com a descrição da especialidade - dermatologia"
-          class="modal fade"
-          id="dermatology"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="staticBackdropLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header modal-header-custom">
-                <h2 class="modal-title modal-title-custom fs-5" id="nutritionist">Dermatologia</h2>
-                <button
-                  type="button"
-                  aria-label="botão para fechar o modal da especialidade"
-                  class="btn-close btn-close-white"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                Na Dermatologia Veterinária, abordamos problemas de pele e
-                pelagem. Se seu pet está lidando com alergias, infecções ou
-                outros problemas dermatológicos, nossa equipe está aqui para
-                oferecer soluções eficazes e proporcionar conforto e bem-estar.
-                Diagnóstico por Imagem: Em nossa especialidade de Diagnóstico
-                por Imagem, utilizamos tecnologias avançadas para diagnosticar
-                condições internas. Radiografias e ultrassom permitem avaliações
-                precisas, auxiliando em diagnósticos eficientes para que
-                possamos oferecer os melhores cuidados possíveis.
-              </div>
-              <div class="modal-footer"></div>
+            <div class="modal-body">
+              Na Cardiologia Veterinária, diagnosticamos e tratamos doenças
+              cardíacas. Utilizamos técnicas avançadas para monitorar a saúde
+              cardiovascular do seu animal de estimação, garantindo que seu
+              coração esteja em ótimas condições para uma vida plena.
             </div>
+            <div class="modal-footer"></div>
           </div>
         </div>
-        <div class="especialidade">
-          <i class="ph ph-paw-print"></i>
-          <p>Dermatologia</p>
-          <button
-            type="button"
-            class="btn-card-custom"
-            aria-label="botão para acessar o modal da especialidade"
-            data-bs-toggle="modal"
-            data-bs-target="#dermatology"
-          >
-            Ver mais
-          </button>
-        </div>
+      </div>
+      <div class="especialidade">
+        <i class="ph ph-heart"></i>
+        <p>Cardiologia</p>
+        <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#cardiology">
+          Ver mais
+        </button>
+      </div>
 
-        <div
-          aria-label="modal com a descrição da especialidade - radiologia"
-          class="modal fade"
-          id="diagnosticByImage"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="staticBackdropLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header modal-header-custom">
-                <h2 class="modal-title modal-title-custom fs-5" id="staticBackdropLabel">
-                  Radiologia
-                </h2>
-                <button
-                  type="button"
-                  aria-label="botão para fechar o modal da especialidade"
-                  class="btn-close btn-close-white"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                Em nossa especialidade de Diagnóstico por Imagem, adotamos uma
-                abordagem moderna e avançada para entender a saúde interna do
-                seu animal de estimação. Utilizando tecnologias como
-                radiografias e ultrassom, nossa equipe altamente qualificada
-                oferece um olhar aprofundado e preciso sobre o interior do corpo
-                do seu pet.
-              </div>
-              <div class="modal-footer"></div>
+      <div aria-label="modal com a descrição da especialidade - nutricionista" class="modal fade" id="nutritionist"
+        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header modal-header-custom">
+              <h2 class="modal-title modal-title-custom fs-5" id="staticBackdropLabel">
+                Nutricionista
+              </h2>
+              <button type="button" aria-label="botão para fechar o modal da especialidade"
+                class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          </div>
-        </div>
-        <div class="especialidade">
-          <i class="ph ph-monitor"></i>
-          <p>Radiologia</p>
-          <button
-            type="button"
-            class="btn-card-custom"
-            aria-label="botão para acessar o modal da especialidade"
-            data-bs-toggle="modal"
-            data-bs-target="#diagnosticByImage"
-          >
-            Ver mais
-          </button>
-        </div>
-
-        <div
-          aria-label="modal com a descrição da especialidade - neurologia"
-          class="modal fade"
-          id="neurology"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="staticBackdropLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header modal-header-custom">
-                <h2 class="modal-title modal-title-custom fs-5" id="staticBackdropLabel">
-                  Neurologia
-                </h2>
-                <button
-                  type="button"
-                  aria-label="botão para fechar o modal da especialidade"
-                  class="btn-close btn-close-white"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                Na Neurologia Veterinária, tratamos distúrbios neurológicos com
-                atenção especial. Se seu pet enfrenta problemas como convulsões
-                ou paralisias, nossa equipe altamente qualificada utiliza
-                técnicas avançadas para diagnosticar e tratar, priorizando a
-                qualidade de vida e o conforto do seu animal de estimação.
-              </div>
-              <div class="modal-footer"></div>
+            <div class="modal-body">
+              Nossos Nutricionistas especializados criam planos alimentares
+              personalizados para atender às necessidades específicas do seu
+              pet. Promovemos uma dieta equilibrada para contribuir para sua
+              saúde geral, proporcionando um suporte nutricional adaptado às
+              suas necessidades individuais.
             </div>
+            <div class="modal-footer"></div>
           </div>
         </div>
-        <div class="especialidade">
-          <i class="ph ph-lightbulb"></i>
-          <p>Neurologia</p>
-          <button
-            type="button"
-            aria-label="botão para acessar o modal da especialidade"
-            class="btn-card-custom"
-            data-bs-toggle="modal"
-            data-bs-target="#neurology"
-          >
-            Ver mais
-          </button>
-        </div>
-      </section>
-      <section
-        aria-label="seção informativa sobre a importância das especialiades"
-        class="container-fluid info-container"
-      >
-        <h2>Por que devo levar meu pet em um veterinário especializado?</h2>
-        <p
-          aria-label="texto informativo sobre veterinários especializados e sua importância para seu pet"
-        >
-          Levar seu pet a um médico veterinário especializado é essencial para
-          cuidados direcionados e diagnósticos precisos. Profissionais
-          especializados possuem conhecimento aprofundado, oferecendo
-          tratamentos personalizados para garantir a saúde e a qualidade de vida
-          do seu animal de estimação. Esse cuidado específico contribui para
-          identificar e abordar problemas de saúde de forma eficaz, assegurando
-          uma vida longa e saudável para o seu companheiro.
-          <strong>
-            Na VetPet, comprometemo-nos a proporcionar esse cuidado excepcional,
-            contando com especialistas capacitados e tecnologia avançada para
-            garantir a saúde e a qualidade de vida do seu animal de
-            estimação.</strong
-          >
-        </p>
-      </section>
-    </main>
+      </div>
+      <div class="especialidade">
+        <i class="ph ph-bowl-food"></i>
+        <p>Nutricionista</p>
+        <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#nutritionist">
+          Ver mais
+        </button>
+      </div>
 
-    <div class="footer-container">
-      <footer class="container">
-        <div>
-          <h3>Nossa localização</h3>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.408814811345!2d-51.20387612364745!3d-29.996415629052485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977775fc4c071%3A0x6de693cbd6b0b5e5!2sDBC!5e0!3m2!1spt-BR!2sbr!4v1705090856925!5m2!1spt-BR!2sbr"
-              style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+      <div aria-label="modal com a descrição da especialidade - dermatologia" class="modal fade" id="dermatology"
+        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header modal-header-custom">
+              <h2 class="modal-title modal-title-custom fs-5" id="nutritionist">Dermatologia</h2>
+              <button type="button" aria-label="botão para fechar o modal da especialidade"
+                class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Na Dermatologia Veterinária, abordamos problemas de pele e
+              pelagem. Se seu pet está lidando com alergias, infecções ou
+              outros problemas dermatológicos, nossa equipe está aqui para
+              oferecer soluções eficazes e proporcionar conforto e bem-estar.
+              Diagnóstico por Imagem: Em nossa especialidade de Diagnóstico
+              por Imagem, utilizamos tecnologias avançadas para diagnosticar
+              condições internas. Radiografias e ultrassom permitem avaliações
+              precisas, auxiliando em diagnósticos eficientes para que
+              possamos oferecer os melhores cuidados possíveis.
+            </div>
+            <div class="modal-footer"></div>
+          </div>
         </div>
-        
-          <div>
-            <h3>Entre em contato</h3>
-            <p class="icon-custom"><i class="ph ph-house"></i>Tv. São José, 455 - Navegantes, Porto Alegre - RS</p>
-            <p class="icon-custom"><i class="ph ph-phone"></i>+55 (51) 9 9999-9999</p>
-            <p class="icon-custom"><i class="ph ph-envelope-simple"></i>petclinic@gmail.com</p>
-            <i class="ph ph-twitter-logo"></i>
-            <i class="ph ph-facebook-logo"></i>
-            <i class="ph ph-google-logo"></i>
+      </div>
+      <div class="especialidade">
+        <i class="ph ph-paw-print"></i>
+        <p>Dermatologia</p>
+        <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#dermatology">
+          Ver mais
+        </button>
+      </div>
+
+      <div aria-label="modal com a descrição da especialidade - radiologia" class="modal fade" id="diagnosticByImage"
+        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header modal-header-custom">
+              <h2 class="modal-title modal-title-custom fs-5" id="staticBackdropLabel">
+                Radiologia
+              </h2>
+              <button type="button" aria-label="botão para fechar o modal da especialidade"
+                class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Em nossa especialidade de Diagnóstico por Imagem, adotamos uma
+              abordagem moderna e avançada para entender a saúde interna do
+              seu animal de estimação. Utilizando tecnologias como
+              radiografias e ultrassom, nossa equipe altamente qualificada
+              oferece um olhar aprofundado e preciso sobre o interior do corpo
+              do seu pet.
+            </div>
+            <div class="modal-footer"></div>
           </div>
-  
-          <div class="div-links">
-            <h3>Links Úteis</h3>
-            <div><a href="https://www.petz.com.br/blog/banho-e-tosa/como-dar-banho-em-cachorro/">Você sabe como dar banho em cachorro? Aprenda já!</a></div>
-            <div><a href="https://vetnil.com.br/blog/dermatite-atopica-em-caes-e-gatos-saiba-mais-sobre-essa-doenca-de-pele">Dermatite atópica em cães e gatos</a></div>
-            <div><a href="https://www.petz.com.br/blog/bem-estar/cachorro-precisa-passear/">Cachorro precisa passear? Veja a importância</a></div>
-            <div><a href="https://www.petz.com.br/blog/pets/gatos/o-que-fazer-para-o-gato-nao-arranhar-o-sofa/">O que fazer para o gato não arranhar o sofá?</a></div>
-            <div><a href="https://www.petz.com.br/blog/pets/gatos/sexto-sentido-gato-some-quando-vai-morrer/">Sexto sentido: gato some quando vai morrer?</a></div>
-            <div><a href="https://www.petz.com.br/blog/pets/caes/como-brincar-com-cachorro-cego/">Descubra como brincar com cachorro cego pode ser divertido!</a></div>
+        </div>
+      </div>
+      <div class="especialidade">
+        <i class="ph ph-monitor"></i>
+        <p>Radiologia</p>
+        <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#diagnosticByImage">
+          Ver mais
+        </button>
+      </div>
+
+      <div aria-label="modal com a descrição da especialidade - neurologia" class="modal fade" id="neurology"
+        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header modal-header-custom">
+              <h2 class="modal-title modal-title-custom fs-5" id="staticBackdropLabel">
+                Neurologia
+              </h2>
+              <button type="button" aria-label="botão para fechar o modal da especialidade"
+                class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Na Neurologia Veterinária, tratamos distúrbios neurológicos com
+              atenção especial. Se seu pet enfrenta problemas como convulsões
+              ou paralisias, nossa equipe altamente qualificada utiliza
+              técnicas avançadas para diagnosticar e tratar, priorizando a
+              qualidade de vida e o conforto do seu animal de estimação.
+            </div>
+            <div class="modal-footer"></div>
           </div>
-      </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        </div>
+      </div>
+      <div class="especialidade">
+        <i class="ph ph-lightbulb"></i>
+        <p>Neurologia</p>
+        <button type="button" class="btn-card-custom" data-bs-toggle="modal" data-bs-target="#neurology">
+          Ver mais
+        </button>
+      </div>
+    </section>
+    <section aria-label="seção informativa sobre a importância das especialiades"
+      class="container-fluid info-container">
+      <h2>Por que devo levar meu pet em um veterinário especializado?</h2>
+      <p aria-label="texto informativo sobre veterinários especializados e sua importância para seu pet">
+        Levar seu pet a um médico veterinário especializado é essencial para
+        cuidados direcionados e diagnósticos precisos. Profissionais
+        especializados possuem conhecimento aprofundado, oferecendo
+        tratamentos personalizados para garantir a saúde e a qualidade de vida
+        do seu animal de estimação. Esse cuidado específico contribui para
+        identificar e abordar problemas de saúde de forma eficaz, assegurando
+        uma vida longa e saudável para o seu companheiro.
+        <strong>
+          Na VetPet, comprometemo-nos a proporcionar esse cuidado excepcional,
+          contando com especialistas capacitados e tecnologia avançada para
+          garantir a saúde e a qualidade de vida do seu animal de
+          estimação.</strong>
+      </p>
+    </section>
+  </main>
+
+  <div class="footer-container">
+    <footer class="container">
+      <div>
+        <h3>Nossa localização</h3>
+        <iframe title="Endereço da clínica"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.408814811345!2d-51.20387612364745!3d-29.996415629052485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977775fc4c071%3A0x6de693cbd6b0b5e5!2sDBC!5e0!3m2!1spt-BR!2sbr!4v1705090856925!5m2!1spt-BR!2sbr"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div>
+        <h3>Entre em contato</h3>
+        <p class="icon-custom"><i class="ph ph-house"></i>Tv. São José, 455 - Navegantes, Porto Alegre - RS</p>
+        <p class="icon-custom"><i class="ph ph-phone"></i>+55 (51) 9 9999-9999</p>
+        <p class="icon-custom"><i class="ph ph-envelope-simple"></i>petclinic@gmail.com</p>
+        <i class="ph ph-twitter-logo"></i>
+        <i class="ph ph-facebook-logo"></i>
+        <i class="ph ph-google-logo"></i>
+      </div>
+
+      <div class="div-links">
+        <h3>Links Úteis</h3>
+        <div><a href="https://www.petz.com.br/blog/banho-e-tosa/como-dar-banho-em-cachorro/">Você sabe como dar banho em
+            cachorro? Aprenda já!</a></div>
+        <div><a
+            href="https://vetnil.com.br/blog/dermatite-atopica-em-caes-e-gatos-saiba-mais-sobre-essa-doenca-de-pele">Dermatite
+            atópica em cães e gatos</a></div>
+        <div><a href="https://www.petz.com.br/blog/bem-estar/cachorro-precisa-passear/">Cachorro precisa passear? Veja a
+            importância</a></div>
+        <div><a href="https://www.petz.com.br/blog/pets/gatos/o-que-fazer-para-o-gato-nao-arranhar-o-sofa/">O que fazer
+            para o gato não arranhar o sofá?</a></div>
+        <div><a href="https://www.petz.com.br/blog/pets/gatos/sexto-sentido-gato-some-quando-vai-morrer/">Sexto sentido:
+            gato some quando vai morrer?</a></div>
+        <div><a href="https://www.petz.com.br/blog/pets/caes/como-brincar-com-cachorro-cego/">Descubra como brincar com
+            cachorro cego pode ser divertido!</a></div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      crossorigin="anonymous"></script>
+</body>
+
 </html>

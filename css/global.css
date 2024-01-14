@@ -1,8 +1,8 @@
 :root {
   --text-black: #000;
   --text-white: #ffffff;
-  --primary: #718355;
-  --secondary: #87986a;
+  --primary: #5a6744;
+  --secondary: #77865d;
   --accent: #97a97c;
   --bg-color: #ecf1e6;
 
@@ -11,7 +11,8 @@
   --radii-small: 4px;
 }
 
-.navbar, .offcanvas-custom {
+.navbar,
+.offcanvas-custom {
   background-color: var(--primary);
   color: var(--text-white);
 }
@@ -85,4 +86,3 @@ iframe {
   display: flex;
   align-items: center;
 }
-
