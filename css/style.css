@@ -93,11 +93,11 @@ main section {
   color: var(--text-white);
 }
 
-.card-title-custom{
+.card-title-custom {
   font-size: 1.5rem;
 }
 
-.card-text-custom{
+.card-text-custom {
   font-size: 1.1rem;
 }
 
@@ -217,6 +217,10 @@ main section {
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
+  background-color: var(--secondary);
+  border-radius: var(--radii-small);
+  padding: 1rem;
+  color: var(--text-white);
 }
 
 .section-services h3 {
@@ -241,12 +245,12 @@ main section {
 }
 
 .card-advantage-circle {
-  color: var(--accent);
+  color: var(--text-white);
   font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid var(--accent);
+  border: 2px solid var(--text-white);
 
   width: 75px;
   height: 75px;
@@ -275,15 +279,15 @@ main section {
     gap: 4rem;
   }
 
-  .cards-advantages{
+  .cards-advantages {
     flex-direction: column;
   }
 
-  .div-services{
+  .div-services {
     max-width: 100%;
   }
 
-  .modal-paragraph{
+  .modal-paragraph {
     line-height: 1.3rem;
     font-size: 1rem;
   }
