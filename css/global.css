@@ -12,7 +12,7 @@
 }
 
 .navbar {
-  background-color: var(--primary) !important;
+  background-color: var(--primary);
   color: var(--text-white);
 }
 
