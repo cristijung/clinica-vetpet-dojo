@@ -70,3 +70,13 @@
   max-width: 7rem;
   margin: auto;
 }
+
+.modal-header-custom {
+  background-color: var(--primary);
+  padding-inline: 2rem;
+}
+
+.modal-title-custom {
+  color: var(--text-white);
+  font-size: 1.75rem;
+}
