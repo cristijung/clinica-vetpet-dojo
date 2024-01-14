@@ -1,4 +1,4 @@
-.text-specialities{
+.text-specialities {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
@@ -7,7 +7,7 @@
 }
 .especialidades-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 240px);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -33,7 +33,6 @@
   display: block;
   width: 0px;
   height: 3px;
-  margin-bottom: 0.5rem;
   background-color: var(--primary);
 }
 
@@ -43,8 +42,8 @@
 }
 
 .especialidade:hover p::before {
-  width: 100%;
-  transition: width 0.3s;
+  width: calc(100% - 0.5rem);
+  transition: width 0.3s ease-in-out;
 }
 
 .especialidade p {
@@ -53,7 +52,6 @@
   font-weight: bold;
   text-align: center;
 }
-
 
 .btn-card-custom {
   background-color: var(--primary);
@@ -68,7 +66,7 @@
   background-color: green;
   border-color: green;
 }
-main{
+main {
   margin-bottom: 3rem;
 }
 
