@@ -1,8 +1,17 @@
+main {
+  padding-bottom: 5rem;
+}
+
 .presentation-description {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem auto;
+  margin: 3rem auto;
+
+  p {
+    max-width: 43.75rem;
+    margin-top: 1rem;
+  }
 }
 
 .presentation-img {
@@ -29,38 +38,47 @@
 .custom-card-presentation {
   padding: 1rem;
   background-color: transparent;
-  border: solid 3px var(--secondary);
+  border: solid 1px var(--secondary);
   min-width: 18.75rem;
   flex: 1;
 }
 
 .custom-card-header-presentation h3,
-p {
+.custom-card-header-presentation p,
+.custom-card-body-presentation p {
   color: var(--primary);
 }
 
-.custom-card-body-presentation {
-  /* Body do card */
+.custom-card-header-presentation p {
+  letter-spacing: 6px;
 }
+
 .custom-calendar {
-  margin-bottom: 3rem;
+  margin: 2rem auto;
+
+  > h2 {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .queries-container {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 
   .card-query {
     display: flex;
     padding: 0 1rem 1rem 1rem;
     width: 25%;
     flex-basis: 200px;
-    border: solid 3px var(--secondary);
+    border: solid 1px var(--secondary);
     color: var(--text-white);
     background-color: transparent;
     align-items: center;
     color: var(--text-white);
+
     h4 {
       display: flex;
       align-items: center;
@@ -68,15 +86,27 @@ p {
       background-color: var(--secondary);
       width: fit-content;
       padding: 0.5rem;
+      gap: 1rem;
       border-radius: 0 0 var(--radii-medium) var(--radii-medium);
     }
     .card-query-date {
       font-size: medium;
       color: #3838389e;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-weight: 500;
+
+      > i {
+        font-size: 1.5rem;
+      }
     }
     .card-query-body p {
       width: 100%;
       display: flex;
+      gap: 0.5rem;
       align-items: center;
       background-color: var(--accent);
       padding: 0.5rem;
@@ -87,7 +117,7 @@ p {
 }
 
 .custom-container-form {
-  border: solid 3px var(--secondary);
+  border: solid 1px var(--secondary);
   margin: 2.5rem auto;
   padding: 4rem;
   border-radius: var(--radii-medium);
@@ -120,4 +150,14 @@ p {
 }
 
 .custom-btn-form {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radii-small);
+  color: var(--text-white);
+  background-color: var(--primary);
+  border: none;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--secondary);
+  }
 }

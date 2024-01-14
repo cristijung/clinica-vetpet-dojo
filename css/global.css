@@ -2,8 +2,8 @@
   --text-black: #000;
   --text-white: #ffffff;
   --primary: #718355;
-  --secondary: #87986A;
-  --accent: #97A97C;
+  --secondary: #87986a;
+  --accent: #97a97c;
   --bg-color: #ecf1e6;
 
   --radii-large: 16px;
@@ -16,9 +16,15 @@
   color: var(--text-white);
 }
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding:0;
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

@@ -69,6 +69,16 @@
   border-color: green;
 }
 main{
-  margin: 2rem;
+  margin-bottom: 3rem;
 }
 
+.info-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 1200px;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  gap: 1rem;
+}
