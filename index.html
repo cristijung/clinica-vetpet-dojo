@@ -47,15 +47,32 @@
       </div>
     </nav>
   </header>
-  <img class="hero-img" src="./assets/pexels-tima-miroshnichenko-6235233.jpg" alt="Doutor examinando um doguinho dodoi">
+
+  
   <main>
+    <div>
+      <img class="hero-img" id="hero-image" src="./assets/pexels-tima-miroshnichenko-6235233.jpg" alt="Doutor examinando um doguinho dodoi">
+
+      <div class="button-change-image-container">
+        <input type="radio" onclick="changeImage('image1')" name="function" id="">
+        <input type="radio" onclick="changeImage('image2')"  name="function" id="">
+        <input type="radio" onclick="changeImage('image3')" name="function" id="">
+      </div>
+    </div>
+
     <section class="container">
       <div class="container-welcome">
         <h1>Bem-vindo à <strong>PetClinic</strong> - Cuidando com Amor e Profissionalismo!</h1>
-        <p>Bem-vindo à nossa clínica, o lugar onde o cuidado e a saúde do seu animal de estimação são as nossas maiores
+        <p>
+          Bem-vindo à nossa clínica, o lugar onde o cuidado e a saúde do seu animal de estimação são as nossas maiores
           prioridades. Aqui, estamos dedicados a proporcionar cuidados veterinários de alta qualidade e compassivos para
-          garantir o bem-estar dos seus queridos animais.</p>
+          garantir o bem-estar dos seus queridos animais.
+        </p>
+
+        
       </div>
+
+
     </section>
 
     <section class="container">
@@ -208,6 +225,8 @@
       </div>
     </section>
   </footer>
+
+  <script src="./js/script.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
