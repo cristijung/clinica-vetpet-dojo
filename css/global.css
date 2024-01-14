@@ -29,6 +29,16 @@
   padding: 0;
 }
 
+header .custom-header {
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.423);
+  -webkit-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.423);
+  -moz-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.423);
+}
+
+.header-text-white a {
+  color: var(--text-white) !important;
+}
+
 /* Footer */
 i.ph {
   font-size: 20px;
@@ -63,10 +73,10 @@ iframe {
   text-decoration: underline;
 }
 
-@media (max-width:992px) {
+@media (max-width: 992px) {
   footer {
-      display: grid;
-      justify-content: center;
-      align-items: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
   }
 }
