@@ -1,7 +1,7 @@
 const arrayImages = [
-    {name: "image1", src: "./assets/pexels-tima-miroshnichenko-6235233.jpg"},
-    {name: "image2", src: "./assets/mao-segurando-pata-cachorro.png"},
-    {name: "image3", src: "./assets/imagem-cachorro-vet.jpg"}
+    {name: "image1", src: "./assets/hero-img1.jpg"},
+    {name: "image2", src: "./assets/hero-img2.jpg"},
+    {name: "image3", src: "./assets/hero-img3.jpg"}
 ];
 
 const imageHero = document.getElementById("hero-image");
