@@ -137,6 +137,7 @@ main section {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .section-services h3 {
@@ -159,6 +160,7 @@ main section {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+
 }
 
 .card-advantage-circle {
