@@ -17,7 +17,9 @@
   <header>
     <nav class="navbar navbar-expand-md fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#"><i class="ph ph-paw-print"></i><div><strong>Vet</strong>Pet</div></a>
+        <a class="navbar-brand" href="#"><i class="ph ph-paw-print"></i>
+          <div><strong>Vet</strong>Pet</div>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -49,10 +51,10 @@
     </nav>
   </header>
 
-  
   <main>
     <div>
-      <img class="hero-img" id="hero-image" src="./assets/pexels-tima-miroshnichenko-6235233.jpg" alt="Doutor examinando um doguinho dodoi">
+      <img class="hero-img" id="hero-image" src="./assets/pexels-tima-miroshnichenko-6235233.jpg"
+        alt="Doutor examinando um doguinho dodoi">
 
       <div class="button-change-image-container">
         <div class="radio-container">
@@ -63,7 +65,7 @@
         </div>
         <div class="radio-container">
           <label for="radio2">
-            <input type="radio" onclick="changeImage('image2')"  name="radio-carousel" id="radio2">
+            <input type="radio" onclick="changeImage('image2')" name="radio-carousel" id="radio2">
             <div class="custom-radio"></div>
           </label>
         </div>
@@ -73,7 +75,7 @@
             <div class="custom-radio"></div>
           </label>
         </div>
-        
+
       </div>
     </div>
 
@@ -86,7 +88,7 @@
           garantir o bem-estar dos seus queridos animais.
         </p>
 
-        
+
       </div>
 
 
@@ -95,54 +97,178 @@
     <section class="container">
       <div class="cards">
         <div class="card card-custom">
-          <img src="./assets/img-gatinho.png" class="card-img-top card-image card-image-custom" alt="...">
+          <img src="./assets/img-gatinho.png" class="card-img-top card-image card-image-custom"
+            alt="Imagem de um gatinho com listras">
           <div class="card-body">
-            <strong class="card-title">Gatos</strong>
-            <p class="card-text">Temos o melhor tratamento para gatos
+            <strong class="card-title card-title-custom">Gatos</strong>
+            <p class="card-text card-text-custom">Temos o melhor tratamento para gatos!
             </p>
 
-            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal" data-bs-target="#">
+            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal"
+              data-bs-target="#modal-gatos">
               Saiba mais
             </button>
           </div>
         </div>
         <div class="card card-custom">
-          <img src="./assets/img-cachorro.png" class="card-img-top card-image card-image-custom" alt="...">
+          <img src="./assets/img-cachorro.png" class="card-img-top card-image card-image-custom"
+            alt="Imagem de um cachorro caramelo">
           <div class="card-body">
-            <strong class="card-title">Cachorros</strong>
-            <p class="card-text">Temos o melhor tratamento para cachorros
+            <strong class="card-title card-title-custom">Cães</strong>
+            <p class="card-text card-text-custom">Amamos todos os amigos de quatro patas!
             </p>
 
-            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal" data-bs-target="#">
+            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal"
+              data-bs-target="#modal-cachorros">
               Saiba mais
             </button>
           </div>
         </div>
         <div class="card card-custom">
-          <img src="./assets/img-ratinho.png" class="card-img-top card-image card-image-custom" alt="...">
+          <img src="./assets/img-ratinho.png" class="card-img-top card-image card-image-custom"
+            alt="Imagem de um hamster cinza">
           <div class="card-body card-body-custom">
-            <strong class="card-title">Roedores</strong>
+            <strong class="card-title card-title-custom">Roedores</strong>
 
-            <p class="card-text">Temos o melhor tratamento para roedores
+            <p class="card-text card-text-custom">Melhores mimos para seus pequenos!
             </p>
 
-            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal" data-bs-target="#">
+            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal"
+              data-bs-target="#modal-roedores">
               Saiba mais
             </button>
           </div>
         </div>
         <div class="card card-custom">
-          <img src="./assets/img-tartaruga-nova.png" class="card-img-top card-image card-image-custom" alt="...">
+          <img src="./assets/img-tartaruga-nova.png" class="card-img-top card-image card-image-custom"
+            alt="Imagem de uma tartaruga fofa">
           <div class="card-body">
-            <strong class="card-title">Répteis</strong>
+            <strong class="card-title card-title-custom">Répteis</strong>
 
             <div>
-              <p class="card-text">Temos o melhor tratamento para répteis</p>
+              <p class="card-text card-text-custom">Seus répteis merecem todo o carinho!</p>
 
               <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal"
-                data-bs-target="#">
+                data-bs-target="#modal-repteis" id="teste">
                 Saiba mais
               </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modal-gatos" tabindex="-1"
+          aria-labelledby="Modal sobre o tratamento de gatos na vetpet" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content modal-content-custom">
+              <div class="modal-header modal-header-custom">
+                <h2 class="modal-title modal-title-custom">Tratamento dos gatos</h2>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body custom-modal-body">
+                <div class="modal-img-container">
+                  <img src="./assets/img-gatinho.png"
+                    class="card-img-top  card-image card-image-custom card-image-modal"
+                    alt="Imagem de um gatinho com listras">
+                </div>
+
+                <h3 class="modal-subtitle">Nosso tratamento para gatos</h3>
+
+                <p class="modal-paragraph">Em nosso ambiente acolhedor, oferecemos consultas veterinárias
+                  especializadas, vacinações e cuidados
+                  preventivos para garantir o bem-estar dos felinos. Contamos com profissionais dedicados e instalações
+                  modernas, proporcionando um atendimento personalizado para cada gatinho. Na VetPet, acreditamos que um
+                  gato saudável é um gato feliz, e nos esforçamos para oferecer o melhor em serviços veterinários,
+                  proporcionando tranquilidade aos tutores e uma vida plena aos seus amados felinos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modal-cachorros" tabindex="-1"
+          aria-labelledby="Modal sobre o tratamento de cachorros na vetpet" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content modal-content-custom">
+              <div class="modal-header modal-header-custom">
+                <h2 class="modal-title modal-title-custom">Tratamento dos cães</h2>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body custom-modal-body">
+                <div class="modal-img-container">
+                  <img src="./assets/img-cachorro.png" class="card-img-top card-image card-image-custom"
+                    alt="card-img-top card-image card-image-custom">
+                </div>
+
+                <h3 class="modal-subtitle">Nosso tratamento para cães</h3>
+
+                <p class="modal-paragraph">Aqui, oferecemos consultas veterinárias especializadas, vacinações e
+                  protocolos de prevenção para
+                  garantir o bem-estar de cada cachorro. Nossa equipe de profissionais está empenhada em fornecer um
+                  atendimento atencioso e personalizado, utilizando instalações modernas para cuidar da saúde dos seus
+                  amados peludos. Na VetPet, acreditamos que cães saudáveis são cães felizes, e nos esforçamos para
+                  oferecer serviços veterinários de excelência, proporcionando tranquilidade aos tutores e uma vida
+                  plena aos seus fiéis amigos de quatro patas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modal-roedores" tabindex="-1"
+          aria-labelledby="Modal sobre o tratamento de roedores na vetpet" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content modal-content-custom">
+              <div class="modal-header modal-header-custom">
+                <h2 class="modal-title modal-title-custom">Tratamento dos roedores</h1>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+              </div>
+              <div class="modal-body custom-modal-body">
+                <div class="modal-img-container">
+                  <img src="./assets/img-ratinho.png" class="card-img-top card-image card-image-custom"
+                    alt="Imagem de um hamster cinza">
+                </div>
+
+                <h3 class="modal-subtitle">Nosso tratamento para roedores</h3>
+
+                <p class="modal-paragraph">Em nosso ambiente acolhedor, oferecemos consultas veterinárias específicas
+                  para roedores, cuidados
+                  preventivos e orientações para garantir a saúde e a felicidade desses pequenos companheiros. Nossa
+                  equipe experiente compreende as necessidades únicas de cada roedor, proporcionando um atendimento
+                  personalizado para garantir seu bem-estar. Na VetPet, sabemos que roedores saudáveis são roedores
+                  felizes, e nos esforçamos para oferecer serviços veterinários excepcionais, proporcionando aos tutores
+                  a certeza de que seus preciosos amigos peludos estão recebendo o melhor cuidado possível.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modal-repteis" tabindex="-1"
+          aria-labelledby="Modal sobre o tratamento de repteis na vetpet" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-custom">
+                <h2 class="modal-title modal-title-custom">Tratamento dos repteis</h2>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body custom-modal-body">
+                <div class="modal-img-container">
+                  <img src="./assets/img-tartaruga-nova.png" class="card-img-top card-image card-image-custom"
+                    alt="Imagem de uma tartaruga fofa">
+                </div>
+
+                <h3 class="modal-subtitle">Nosso tratamento para repteis</h3>
+
+                <p class="modal-paragraph">Aqui, oferecemos consultas veterinárias adaptadas às necessidades únicas dos
+                  seus répteis, garantindo
+                  cuidados preventivos e orientações para promover sua saúde e bem-estar. Nossa equipe, composta por
+                  profissionais experientes em animais exóticos, está pronta para fornecer um atendimento personalizado,
+                  utilizando instalações modernas e recursos específicos para os répteis. Na VetPet, entendemos a
+                  singularidade de cada espécie e nos empenhamos em oferecer serviços veterinários excepcionais,
+                  proporcionando aos tutores a tranquilidade de que seus fascinantes amigos escamosos estão recebendo o
+                  tratamento mais cuidadoso e dedicado possível..</p>
+              </div>
             </div>
           </div>
         </div>
@@ -188,7 +314,7 @@
           <div>
             <span class="rounded-circle card-advantage-circle">B</span>
             <p>Cuidamos com amor da saúde do seu melhor amigo.</p>
-            <a href="#">Saiba mais</a>
+            <a href="#">Saiba mais!</a>
           </div>
 
         </div>
