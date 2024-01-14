@@ -2,10 +2,6 @@ body {
   background-color: var(--bg-color);
 }
 
-main {
-  margin-top: 3.5rem;
-}
-
 main section {
   margin-bottom: 6rem;
 }
@@ -54,7 +50,6 @@ main section {
 
 .cards {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
 }
@@ -103,23 +98,32 @@ main section {
 } */
 
 .about-us-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 1rem;
   justify-content: space-evenly;
+}
+
+.image-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-about {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 9999px;
   overflow: hidden;
 }
 
 .image-about img {
-  max-width: 250px;
+  margin: auto;
+  max-width: 400px;
   position: absolute;
-  top: 0px;
-  left: -50px;
+  top: -10px;
+  left: -100px;
 }
 
 .advantages-container {
@@ -163,6 +167,19 @@ main section {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+
+}
+
+.card-advantage-circle {
+  color: var(--accent);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--accent);
+
+  width: 75px;
+  height: 75px;
 }
 
 .cards-advantages div {
@@ -172,4 +189,19 @@ main section {
   text-align: center;
   line-height: 1.2;
   gap: 0.5rem;
+}
+
+@media (max-width: 768px){
+  .cards{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-services{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
 }
