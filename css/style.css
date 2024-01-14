@@ -16,7 +16,7 @@ main section {
   padding: 4px;
 }
 
-.button-change-image-container input[type="radio"] {
+.button-change-image-container input[type='radio'] {
   display: none;
 }
 
@@ -41,7 +41,7 @@ main section {
   border-radius: 50%;
 }
 
-.button-change-image-container input[type="radio"]:checked + .custom-radio {
+.button-change-image-container input[type='radio']:checked + .custom-radio {
   background-color: var(--primary);
 }
 
@@ -179,7 +179,7 @@ main section {
   font-weight: 400;
 }
 
-.about-us-info button{
+.about-us-info button {
   width: 7rem;
   float: inline-end;
   background-color: var(--primary);
@@ -232,6 +232,12 @@ main section {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+}
+
+.testimonials {
+  aspect-ratio: 1.29;
+  object-fit: cover;
+  width: 15.625rem;
 }
 
 .cards-advantages-info {
