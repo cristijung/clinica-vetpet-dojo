@@ -89,7 +89,7 @@ main section {
 .card-custom {
   width: min(100%, 300px);
   text-align: center;
-  background-color: var(--accent);
+  background-color: var(--secondary);
   color: var(--text-white);
 }
 
@@ -217,7 +217,7 @@ main section {
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
-  background-color: var(--secondary);
+  background-color: var(--accent);
   border-radius: var(--radii-small);
   padding: 1rem;
   color: var(--text-white);
