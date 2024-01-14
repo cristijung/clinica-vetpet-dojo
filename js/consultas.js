@@ -1,10 +1,10 @@
 function renderSpecialties() {
   const specialties = [
+    "Cardiologia",
+    "Clínico Geral",
     "Nutricionista",
     "Neurologia",
     "Ortopedia",
-    "Cardiologia",
-    "Clínico Geral",
   ];
 
   const options = specialties
@@ -18,21 +18,25 @@ function renderSpecialties() {
 
 function renderMedics() {
   const medics = [
-    { specialty: "Nutricionista", name: "Dr. João" },
     { specialty: "Nutricionista", name: "Dra. Ana" },
     { specialty: "Nutricionista", name: "Dr. Carlos" },
+    { specialty: "Nutricionista", name: "Dr. João" },
+
     { specialty: "Neurologia", name: "Dra. Maria" },
     { specialty: "Neurologia", name: "Dr. Pedro" },
     { specialty: "Neurologia", name: "Dra. Sofia" },
+
     { specialty: "Ortopedia", name: "Dr. André" },
-    { specialty: "Ortopedia", name: "Dra. Laura" },
     { specialty: "Ortopedia", name: "Dr. Gabriel" },
+    { specialty: "Ortopedia", name: "Dra. Laura" },
+
     { specialty: "Cardiologia", name: "Dra. Camila" },
     { specialty: "Cardiologia", name: "Dr. Lucas" },
     { specialty: "Cardiologia", name: "Dra. Rafaela" },
-    { specialty: "Clínico Geral", name: "Dr. Marcos" },
-    { specialty: "Clínico Geral", name: "Dra. Juliana" },
+
     { specialty: "Clínico Geral", name: "Dr. Fernanda" },
+    { specialty: "Clínico Geral", name: "Dra. Juliana" },
+    { specialty: "Clínico Geral", name: "Dr. Marcos" },
   ].filter(
     (medic) => medic.specialty === document.getElementById("specialty").value
   );
@@ -49,11 +53,11 @@ function renderMedics() {
 function renderAnimals() {
   const animals = [
     "Cachorro",
+    "Coelho",
     "Gato",
+    "Hamster",
     "Pássaro",
     "Peixe",
-    "Coelho",
-    "Hamster",
     "Outro",
   ];
 
@@ -84,7 +88,7 @@ function addOtherAnimalListener() {
       otherAnimal();
     } else {
       const otherAnimalInput = document.getElementById("other-animal-div");
-      otherAnimalInput.remove();
+      otherAnimalInput && otherAnimalInput.remove();
     }
   });
 }
@@ -115,6 +119,8 @@ function onSubmit(event) {
     doctor,
     date,
   });
+
+  event.target.reset();
 }
 
 function updateLocalStorage(item) {
@@ -139,13 +145,22 @@ function getLocalStorage() {
   }
 
   return JSON.parse(localStorageData).map((item) => {
-
     const date = new Date(item.date);
-    date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
+
+    const options = {
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      hour12: false,
+    };
+
+    const formattedDate = date.toLocaleString("pt-BR", options);
 
     return {
       ...item,
-      date: date.toLocaleDateString("pt-BR")
+      date: formattedDate,
     };
   });
 }
@@ -161,10 +176,10 @@ function renderCalendar() {
     query.classList.add("card-query");
     query.classList.add("card");
     query.innerHTML = `
-      <h4><i class="ph ph-smiley"></i> ${item.clientName}</h4>
+      <h4>${item.clientName}</h4>
       <p class="card-query-date"><i class="ph ph-calendar"></i> ${item.date}</p>
       <div class="card-query-body">
-        <p ><i class="ph ph-cat"></i> ${item.animal}</p>
+        <p ><i class="ph ph-paw-print"></i> ${item.animal}</p>
         <p><i class="ph ph-pulse"></i> ${item.specialty}</p>
         <p><i class="ph ph-stethoscope"></i> ${item.doctor}</p>
       </div>
@@ -188,6 +203,8 @@ function otherAnimal() {
 
   const input = document.createElement("input");
   input.setAttribute("type", "text");
+  input.required = true;
+  input.minLength = 3;
   input.classList.add("form-control");
   input.name = "other-animal";
   input.id = "other-animal";
