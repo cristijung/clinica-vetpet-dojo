@@ -3,26 +3,38 @@ i.ph {
     padding-right: 10px;
 }
 
-footer > section:first-child {
-    background-color: var(--primary) !important;
+.footer-container {
+    width: 100%;
+    background-color: var(--primary);
+    padding: 32px 20px;
 }
 
-a.text-light{
+footer {
     display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    color: var(--text-white);
 }
 
 iframe {
+    width: 100%;
+    height: 200px;
     border-radius: 4px;
-}
-
-.text-light a {
-    color: white
 }
 
 .div-links a {
     text-decoration: none;
+    color: var(--text-white);
 }
 
 .div-links a:hover {
     text-decoration: underline;
+}
+
+@media (max-width:992px) {
+    footer {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
 }
