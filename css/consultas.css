@@ -56,7 +56,7 @@ main {
 .custom-calendar {
   margin: 2rem auto;
 
-  > h2 {
+  >h2 {
     margin-bottom: 1.5rem;
   }
 }
@@ -78,6 +78,7 @@ main {
     background-color: transparent;
     align-items: center;
     color: var(--text-white);
+
     h4 {
       display: flex;
       align-items: center;
@@ -88,6 +89,7 @@ main {
       gap: 1rem;
       border-radius: 0 0 var(--radii-medium) var(--radii-medium);
     }
+
     .card-query-date {
       font-size: medium;
       color: #3838389e;
@@ -96,10 +98,12 @@ main {
       justify-content: center;
       gap: 0.5rem;
       font-weight: 500;
-      > i {
+
+      >i {
         font-size: 1.5rem;
       }
     }
+
     .card-query-body p {
       width: 100%;
       display: flex;
@@ -157,4 +161,15 @@ main {
   &:hover {
     background-color: var(--secondary);
   }
+}
+
+@media (max-width: 320px) {
+  .custom-btn-form-container {
+    justify-content: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
 }
