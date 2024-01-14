@@ -1,0 +1,20 @@
+i.ph {
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+footer > section:first-child {
+    background-color: var(--primary) !important;
+}
+
+a.text-light{
+    display: flex;
+}
+
+iframe {
+    border-radius: 4px;
+}
+
+.text-light a {
+    color: white
+}
