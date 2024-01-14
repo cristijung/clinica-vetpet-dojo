@@ -18,3 +18,11 @@ iframe {
 .text-light a {
     color: white
 }
+
+.div-links a {
+    text-decoration: none;
+}
+
+.div-links a:hover {
+    text-decoration: underline;
+}
