@@ -40,6 +40,10 @@ header .custom-header {
   color: var(--text-white) !important;
 }
 
+.header-text-white a:hover {
+  opacity: 0.8;
+}
+
 .navbar-toggler {
   border-color: var(--text-white);
   color: var(--text-white);
