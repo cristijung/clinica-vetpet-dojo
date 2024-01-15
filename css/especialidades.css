@@ -5,6 +5,7 @@
   margin-top: 3em !important;
   margin: 1rem;
 }
+
 .especialidades-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -50,7 +51,6 @@
   color: var(--text-black);
   font-size: 1.5rem;
   font-weight: bold;
-  text-align: center;
 }
 
 .btn-card-custom {
@@ -63,9 +63,9 @@
 }
 
 .btn-card-custom:hover {
-  background-color: green;
-  border-color: green;
+  background-color: var(--secondary);
 }
+
 main {
   margin-bottom: 3rem;
 }
@@ -76,7 +76,13 @@ main {
   padding: 2rem;
   max-width: 1200px;
   align-items: center;
-  text-align: center;
+  text-align: justify;
   margin: 0 auto;
   gap: 1rem;
+}
+
+@media (max-width: 320px) {
+  .info-container {
+    text-align: center;
+  }
 }

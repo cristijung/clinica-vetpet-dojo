@@ -6,12 +6,6 @@ main section {
   margin-bottom: 6rem;
 }
 
-header .custom-header {
-  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.423);
-  -webkit-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.423);
-  -moz-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.423);
-}
-
 .button-change-image-container {
   display: flex;
   justify-content: center;
@@ -47,7 +41,7 @@ header .custom-header {
   border-radius: 50%;
 }
 
-.button-change-image-container input[type="radio"]:checked+.custom-radio {
+.button-change-image-container input[type="radio"]:checked + .custom-radio {
   background-color: var(--primary);
 }
 
@@ -191,13 +185,17 @@ header .custom-header {
   background-color: var(--primary);
   border-color: var(--primary);
   border-radius: var(--radii-medium);
-  color: var(--text-white);
   font-weight: 500;
 }
 
+.about-us-info a {
+  text-decoration: none;
+  color: var(--text-white);
+  display: block;
+}
+
 .about-us-info button:hover {
-  background-color: var(--bg-color);
-  border: 1px solid var(--primary);
+  background-color: var(--secondary);
 }
 
 .advantages-container {
@@ -234,6 +232,12 @@ header .custom-header {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+}
+
+.testimonials {
+  aspect-ratio: 1.29;
+  object-fit: cover;
+  width: 15.625rem;
 }
 
 .cards-advantages-info {
@@ -330,6 +334,7 @@ header .custom-header {
     justify-content: center;
     align-items: center;
     gap: 4rem;
+    border-radius: 0;
   }
 
   .cards-advantages {
