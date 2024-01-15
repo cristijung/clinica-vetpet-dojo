@@ -40,10 +40,25 @@ header .custom-header {
   color: var(--text-white) !important;
 }
 
+.navbar-toggler {
+  border-color: var(--text-white);
+  color: var(--text-white);
+  font-size: 1.5rem;
+}
+
+.navbar-toggler i {
+  font-size: 1.5rem;
+}
+
 /* Footer */
-i.ph {
+.footer-icons .ph {
   font-size: 20px;
   padding-right: 10px;
+}
+
+.footer-icons a {
+  text-decoration: none;
+  color: var(--text-white);
 }
 
 .footer-container {
