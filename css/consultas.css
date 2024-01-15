@@ -164,6 +164,12 @@ main {
   }
 }
 
+.custom-container-form-status {
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary);
+}
+
 @media (max-width: 320px) {
   .custom-btn-form-container {
     justify-content: center;

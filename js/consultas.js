@@ -120,6 +120,7 @@ function onSubmit(event) {
     date,
   });
 
+  document.getElementById("status").innerText = "Consulta marcada com sucesso!";
   event.target.reset();
 }
 
