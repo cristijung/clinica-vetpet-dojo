@@ -1,9 +1,8 @@
-
-body{
+body {
   background-color: var(--bg-color);
 }
 
-.section-exams{
+.section-exams {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -14,21 +13,22 @@ body{
   margin: 2rem 0;
 }
 
-.subtitle-exams{
+.subtitle-exams {
   margin-bottom: 4rem;
 }
 
-.container-cards-exams{
+.container-cards-exams {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
-.card-custom-exams{
-  border-radius: var(--radii-medium) ;
+.card-custom-exams {
+  border-radius: var(--radii-medium);
   border: solid var(--primary) 1px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   max-width: 20rem;
   min-width: 10rem;
   position: relative;
@@ -36,39 +36,39 @@ body{
 }
 
 .btn-card-custom {
-    position: absolute;
-    bottom: 1.5rem;
-    left: calc(50% - 86px);
-    background-color: var(--primary);
-    border-color: var(--primary);
-    padding: 0.5rem 1.5rem;
-    border-radius: var(--radii-small);
-    border: none;
-    color: var(--text-white);
+  position: absolute;
+  bottom: 1.5rem;
+  left: calc(50% - 86px);
+  background-color: var(--primary);
+  border-color: var(--primary);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radii-small);
+  border: none;
+  color: var(--text-white);
 }
 
 .btn-card-custom:hover {
-    background-color: var(--secondary);
+  background-color: var(--secondary);
 }
 
-.card-custom-exams span{
+.card-custom-exams h2 {
   font-size: 1.2rem;
   color: var(--primary);
   font-weight: 500;
 }
-.card-custom-exams p{
+.card-custom-exams p {
   margin-top: 20px;
   color: var(--text-black);
 }
 
-.hero-exams{
+.hero-exams {
   background-image: url("../assets/exames-pets.webp");
   height: 600px;
   object-fit: cover;
   background-position: 70% 30%;
 }
 
-.card-image-custom{
+.card-image-custom {
   padding-top: 2rem;
   max-width: 7rem;
   margin: auto;

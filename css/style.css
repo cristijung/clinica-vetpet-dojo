@@ -16,7 +16,7 @@ main section {
   padding: 4px;
 }
 
-.button-change-image-container input[type='radio'] {
+.button-change-image-container input[type="radio"] {
   display: none;
 }
 
@@ -41,7 +41,7 @@ main section {
   border-radius: 50%;
 }
 
-.button-change-image-container input[type='radio']:checked + .custom-radio {
+.button-change-image-container input[type="radio"]:checked + .custom-radio {
   background-color: var(--primary);
 }
 
