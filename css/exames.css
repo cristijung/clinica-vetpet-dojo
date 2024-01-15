@@ -79,6 +79,10 @@ body {
   padding-inline: 2rem;
 }
 
+.modal-header-custom h2{
+  color: var(--text-white);
+}
+
 .modal-title-custom {
   color: var(--text-white);
   font-size: 1.75rem;
