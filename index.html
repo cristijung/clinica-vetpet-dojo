@@ -4,28 +4,40 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Clínica VetPet</title>
+  <meta name="keywords"
+    content="VetPet, clínica, veterinária, pets, animais, cachorro, gato, consultas, exames, agendamentos">
+  <meta name="description" content="VetPet - cuidando do seu pet com amor e profissionalismo">
+
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="./js/script.js" defer></script>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/style.css">
+
+  <title>Clínica VetPet</title>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top" aria-label="Barra de Navegação do Cabeçalho">
+    <nav class="navbar navbar-expand-md fixed-top custom-header header-text-white">
       <div class="container">
-        <a class="navbar-brand" href="#"><i class="ph ph-paw-print"></i><strong>Pet</strong>Clinic</a>
+        <a class="navbar-brand" href="#"><i class="ph ph-paw-print"></i>
+          <div><strong>Vet</strong>Pet</div>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <i class="ph ph-list"></i>
         </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              <i class="ph ph-paw-print"></i><strong>Pet</strong>Clinic</a>
+              <i class="ph ph-paw-print"></i><strong>Vet</strong>Pet</a>
             </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -38,8 +50,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="./pages/exames.html">Exames</a>
               </li>
-
-
             </ul>
           </div>
         </div>
@@ -48,158 +58,301 @@
   </header>
 
   <main>
+    <div>
+      <img class="hero-img" id="hero-image" src="./assets/hero-img1.jpg" alt="Doutor examinando um doguinho dodoi">
+      <div class="button-change-image-container">
+        <div class="radio-container">
+          <label for="radio1">
+            <input type="radio" onclick="changeImage('image1')" name="radio-carousel" id="radio1" checked>
+            <div class="custom-radio"></div>
+          </label>
+        </div>
+        <div class="radio-container">
+          <label for="radio2">
+            <input type="radio" onclick="changeImage('image2')" name="radio-carousel" id="radio2">
+            <div class="custom-radio"></div>
+          </label>
+        </div>
+        <div class="radio-container">
+          <label for="radio3">
+            <input type="radio" onclick="changeImage('image3')" name="radio-carousel" id="radio3">
+            <div class="custom-radio"></div>
+          </label>
+        </div>
+      </div>
+    </div>
+
     <section class="container">
-      <img class="d-block w-100 hero-img" src="./assets/pexels-tima-miroshnichenko-6235233.jpg"
-        alt="Doutor examinando um doguinho dodoi">
-      <div class="text-center">
-        <h1 class="h2">Bem-vindo à PetClinic - Cuidando com Amor e Profissionalismo!</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, explicabo.</p>
+      <div class="container-welcome">
+        <h1>Bem-vindo à <strong>VetPet</strong> - Cuidando do seu pet com amor e profissionalismo!</h1>
+        <p>
+          Bem-vindo à nossa clínica, o lugar onde o cuidado e a saúde do seu animal de estimação são as nossas maiores
+          prioridades. Aqui, estamos dedicados a proporcionar cuidados veterinários de alta qualidade e compassivos para
+          garantir o bem-estar dos seus queridos animais.
+        </p>
       </div>
     </section>
+
     <section class="container">
       <div class="cards">
         <div class="card card-custom">
-          <img src="./assets/img-gatinho.png" class="card-img-top card-image card-image-custom" alt="...">
+          <img src="./assets/img-gatinho.png" class="card-img-top card-image card-image-custom"
+            alt="Imagem de um gatinho com listras">
           <div class="card-body">
-            <strong class="card-title"></strong>
-            <span class="card-subtitle mb-2 text-body-secondary d-block">Gatos</span>
-
-            <p class="card-text">Temos o melhor tratamento para gatos
-            </p>
-
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-              data-bs-target="#modalCienciaComputacao">
-              Mais informações
+            <strong class="card-title card-title-custom">Gatos</strong>
+            <p class="card-text card-text-custom">Temos o melhor tratamento para gatos!</p>
+            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal"
+              data-bs-target="#modal-gatos">
+              Saiba mais
             </button>
           </div>
         </div>
+
         <div class="card card-custom">
-          <img src="./assets/img-cachorro.png" class="card-img-top card-image card-image-custom" alt="...">
+          <img src="./assets/img-cachorro.png" class="card-img-top card-image card-image-custom"
+            alt="Imagem de um cachorro caramelo">
           <div class="card-body">
-            <strong class="card-title"></strong>
-            <span class="card-subtitle mb-2 text-body-secondary d-block">Cachorro</span>
-
-            <p class="card-text">Temos o melhor tratamento para cachorros
+            <strong class="card-title card-title-custom">Cães</strong>
+            <p class="card-text card-text-custom">Amamos todos os amigos de quatro patas!
             </p>
-
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-              data-bs-target="#modalCienciaComputacao">
-              Mais informações
+            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal"
+              data-bs-target="#modal-cachorros">
+              Saiba mais
             </button>
           </div>
         </div>
+
         <div class="card card-custom">
-          <img src="./assets/img-ratinho.png" class="card-img-top card-image card-image-custom" alt="...">
+          <img src="./assets/img-ratinho.png" class="card-img-top card-image card-image-custom"
+            alt="Imagem de um hamster cinza">
           <div class="card-body card-body-custom">
-            <strong class="card-title">Roedores</strong>
-
-            <p class="card-text">Temos o melhor tratamento para roedores
-            </p>
-
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-              data-bs-target="#modalCienciaComputacao">
-              Mais informações
+            <strong class="card-title card-title-custom">Roedores</strong>
+            <p class="card-text card-text-custom">Melhores mimos para seus pequenos!</p>
+            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal"
+              data-bs-target="#modal-roedores">
+              Saiba mais
             </button>
           </div>
         </div>
+
         <div class="card card-custom">
-          <img src="./assets/img-tartaruga.png" class="card-img-top card-image card-image-custom" alt="...">
+          <img src="./assets/img-tartaruga-nova.png" class="card-img-top card-image card-image-custom"
+            alt="Imagem de uma tartaruga fofa">
           <div class="card-body">
-            <strong class="card-title">Tartaruga</strong>
+            <strong class="card-title card-title-custom">Répteis</strong>
+            <p class="card-text card-text-custom">Seus répteis merecem todo o carinho!</p>
+            <button type="button" class="btn btn-primary custom-button-card" data-bs-toggle="modal"
+              data-bs-target="#modal-repteis" id="teste">
+              Saiba mais
+            </button>
+          </div>
+        </div>
 
-            <div>
-              <p class="card-text">Temos o melhor tratamento para tartaruga
-              </p>
+        <div class="modal fade" id="modal-gatos" tabindex="-1"
+          aria-labelledby="Modal sobre o tratamento de gatos na vetpet" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content modal-content-custom">
+              <div class="modal-header modal-header-custom">
+                <h2 class="modal-title modal-title-custom">Tratamento dos gatos</h2>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body custom-modal-body">
+                <div class="modal-img-container">
+                  <img src="./assets/img-gatinho.png"
+                    class="card-img-top  card-image card-image-custom card-image-modal"
+                    alt="Imagem de um gatinho com listras">
+                </div>
+                <h3 class="modal-subtitle">Nosso tratamento para gatos</h3>
+                <p class="modal-paragraph">Em nosso ambiente acolhedor, oferecemos consultas veterinárias
+                  especializadas, vacinações e cuidados
+                  preventivos para garantir o bem-estar dos felinos. Contamos com profissionais dedicados e instalações
+                  modernas, proporcionando um atendimento personalizado para cada gatinho. Na VetPet, acreditamos que um
+                  gato saudável é um gato feliz, e nos esforçamos para oferecer o melhor em serviços veterinários,
+                  proporcionando tranquilidade aos tutores e uma vida plena aos seus amados felinos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#modalCienciaComputacao">
-                Mais informações
-              </button>
+        <div class="modal fade" id="modal-cachorros" tabindex="-1"
+          aria-labelledby="Modal sobre o tratamento de cachorros na vetpet" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content modal-content-custom">
+              <div class="modal-header modal-header-custom">
+                <h2 class="modal-title modal-title-custom">Tratamento dos cães</h2>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body custom-modal-body">
+                <div class="modal-img-container">
+                  <img src="./assets/img-cachorro.png" class="card-img-top card-image card-image-custom"
+                    alt="card-img-top card-image card-image-custom">
+                </div>
+                <h3 class="modal-subtitle">Nosso tratamento para cães</h3>
+                <p class="modal-paragraph">Aqui, oferecemos consultas veterinárias especializadas, vacinações e
+                  protocolos de prevenção para
+                  garantir o bem-estar de cada cachorro. Nossa equipe de profissionais está empenhada em fornecer um
+                  atendimento atencioso e personalizado, utilizando instalações modernas para cuidar da saúde dos seus
+                  amados peludos. Na VetPet, acreditamos que cães saudáveis são cães felizes, e nos esforçamos para
+                  oferecer serviços veterinários de excelência, proporcionando tranquilidade aos tutores e uma vida
+                  plena aos seus fiéis amigos de quatro patas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modal-roedores" tabindex="-1"
+          aria-labelledby="Modal sobre o tratamento de roedores na vetpet" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content modal-content-custom">
+              <div class="modal-header modal-header-custom">
+                <h2 class="modal-title modal-title-custom">Tratamento dos roedores</h1>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+              </div>
+              <div class="modal-body custom-modal-body">
+                <div class="modal-img-container">
+                  <img src="./assets/img-ratinho.png" class="card-img-top card-image card-image-custom"
+                    alt="Imagem de um hamster cinza">
+                </div>
+                <h3 class="modal-subtitle">Nosso tratamento para roedores</h3>
+                <p class="modal-paragraph">Em nosso ambiente acolhedor, oferecemos consultas veterinárias específicas
+                  para roedores, cuidados
+                  preventivos e orientações para garantir a saúde e a felicidade desses pequenos companheiros. Nossa
+                  equipe experiente compreende as necessidades únicas de cada roedor, proporcionando um atendimento
+                  personalizado para garantir seu bem-estar. Na VetPet, sabemos que roedores saudáveis são roedores
+                  felizes, e nos esforçamos para oferecer serviços veterinários excepcionais, proporcionando aos tutores
+                  a certeza de que seus preciosos amigos peludos estão recebendo o melhor cuidado possível.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modal-repteis" tabindex="-1"
+          aria-labelledby="Modal sobre o tratamento de repteis na vetpet" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-header-custom">
+                <h2 class="modal-title modal-title-custom">Tratamento dos repteis</h2>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body custom-modal-body">
+                <div class="modal-img-container">
+                  <img src="./assets/img-tartaruga-nova.png" class="card-img-top card-image card-image-custom"
+                    alt="Imagem de uma tartaruga fofa">
+                </div>
+                <h3 class="modal-subtitle">Nosso tratamento para repteis</h3>
+                <p class="modal-paragraph">Aqui, oferecemos consultas veterinárias adaptadas às necessidades únicas dos
+                  seus répteis, garantindo
+                  cuidados preventivos e orientações para promover sua saúde e bem-estar. Nossa equipe, composta por
+                  profissionais experientes em animais exóticos, está pronta para fornecer um atendimento personalizado,
+                  utilizando instalações modernas e recursos específicos para os répteis. Na VetPet, entendemos a
+                  singularidade de cada espécie e nos empenhamos em oferecer serviços veterinários excepcionais,
+                  proporcionando aos tutores a tranquilidade de que seus fascinantes amigos escamosos estão recebendo o
+                  tratamento mais cuidadoso e dedicado possível..</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="container my-5">
-      <div class="container mt-5">
-
-        <div class="row about-us-container">
-          <div class="col-md-4 image-about">
-            <img src="assets/image-sabout.avif">
-          </div>
-          <div class="col-md-8 d-flex flex-column align-items-center">
-            <h3 class="align-self-start">About Our Clinic</h3>
-            <p class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium eos expedita
-              soluta nobis, natus, odit porro voluptatum praesentium sed facilis assumenda! Ducimus ad quisquam
-              adipisci. Provident reprehenderit delectus nesciunt exercitationem.</p>
-
-            <div class="d-flex justify-content-end w-100">
-              <button class="btn btn-success ">Leia Mais</button>
-            </div>
+    <section class="container section-about-us">
+      <div class="container">
+        <div class="about-us-container">
+          <img src="assets/image-sabout.avif" alt="Mulher medindo batimentos cardíacos de um cachorro com estetoscópio">
+          <div class="about-us-info">
+            <h2>Sobre nós</h2>
+            <p>Nossa equipe de veterinários altamente qualificados é apaixonada por animais e está comprometida
+              em oferecer serviços especializados para atender às necessidades individuais de cada paciente. Seja para
+              consultas de rotina, tratamentos médicos ou cirurgias, estamos aqui para oferecer cuidados abrangentes e
+              personalizados.
+            </p>
+            <button class="btn custom-button reset-link"><a href="./pages/especialidades.html">Ver mais</a></button>
           </div>
         </div>
       </div>
     </section>
-    <section class="container d-flex ">
-      <div class="col-md-6 ">
-        <h3>Our Advantages</h3>
-        <div class="d-flex gap-5">
-          <div>
-            <span class="border border-secondary rounded-circle d-flex align-items-center justify-content-center fs-2 text-danger" style="width: 75px; height: 75px;">A</span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, voluptates?</p>
-              <a href="">Learn More</a>
+
+    <section class="container section-services">
+      <div class="div-services">
+        <h3>Nossas vantagens</h3>
+        <div class="cards-advantages">
+          <div class="cards-advantages-info">
+            <span class="rounded-circle card-advantage-circle">A</span>
+            <p>Temos profissionais especializados em todas as áreas da veterinária</p>
+            <a href="#">Saiba mais <i class="ph ph-arrow-up-right"></i></a>
           </div>
-          <div>
-            <span class="border border-secondary rounded-circle d-flex align-items-center justify-content-center fs-2 text-danger" style="width: 75px; height: 75px;">B</span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, voluptates?</p>
-            <a href="">Learn More</a>
+          <div class="cards-advantages-info">
+            <span class="rounded-circle card-advantage-circle">B</span>
+            <p>Cuidamos com amor da saúde do seu melhor amigo.</p>
+            <a href="#">Saiba mais <i class="ph ph-arrow-up-right"></i></a>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4 ">
-        <h3>Our Services</h3>
+      <div class="our-services-info">
+        <h3>Nossos serviços</h3>
         <ul>
-          <li>Lorem ipsum dolor sit.</li>
-          <li>Lorem ipsum dolor sit.</li>
-          <li>Lorem ipsum dolor sit.</li>
-          <li>Lorem ipsum dolor sit.</li>
-          <li>Lorem ipsum dolor sit.</li>
+          <li>Consultas.</li>
+          <li>Vacinação.</li>
+          <li>Exames de urina.</li>
+          <li>Exames de sangue.</li>
+          <li>Ultrassom.</li>
+          <li>Raio-X.</li>
+          <li>Entre outros.</li>
         </ul>
       </div>
-        
-      <div class="col-md-2 ">
-        <h3>Testimonials</h3>
-        <img src="https://placeholder.com/200x200" alt="">
+
+      <div>
+        <h3>Avaliações</h3>
+        <img src="./assets/image-avaliacao.webp" class="testimonials"
+          alt="Avaliações dos clientes sobre a clínica vet pet">
       </div>
     </section>
   </main>
 
-  <footer class="bg-primary p-3">
-    <section class="container d-flex flex-wrap">
-      <div class="col-md-4">
-        <h3 class="text-light mb-4">Our Location</h3>
-        <div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.408814811345!2d-51.20387612364745!3d-29.996415629052485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977775fc4c071%3A0x6de693cbd6b0b5e5!2sDBC!5e0!3m2!1spt-BR!2sbr!4v1705090856925!5m2!1spt-BR!2sbr" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+  <!-- Deiz -->
+  <div class="footer-container">
+    <footer class="container">
+      <div>
+        <h3>Nossa localização</h3>
+        <iframe title="Endereço da clínica"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.408814811345!2d-51.20387612364745!3d-29.996415629052485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977775fc4c071%3A0x6de693cbd6b0b5e5!2sDBC!5e0!3m2!1spt-BR!2sbr!4v1705090856925!5m2!1spt-BR!2sbr"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
-      <div class="col-md-4 text-light">
-        <h3 class="text-light mb-4">Get In Touch</h3>
-        <p>Tv. São José, 455 - Navegantes, Porto Alegre - RS</p>
-        <p>+55 (51) 9 9999-9999</p>
-      </div>
-      <div class="col-md-4 text-light">
-        <h3 class="mb-4">Useful Links</h3>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
-    </section>
-  </footer>
 
+      <div class="footer-icons">
+        <h3>Entre em contato</h3>
+        <p class="icon-custom"><i class="ph ph-house"></i>Tv. São José, 455 - Navegantes, Porto Alegre - RS</p>
+        <p class="icon-custom"><i class="ph ph-phone"></i>+55 (51) 9 9999-9999</p>
+        <p class="icon-custom"><i class="ph ph-envelope-simple"></i>petclinic@gmail.com</p>
+        <a href="#" aria-label="Nossa página no Twitter"><i class="ph ph-twitter-logo"></i></a>
+        <a href="#" aria-label="Nossa página no Fwitter"><i class="ph ph-facebook-logo"></i></a>
+        <a href="#" aria-label="Nosso email"><i class="ph ph-google-logo"></i></a>
+      </div>
+
+      <div class="div-links">
+        <h3>Links Úteis</h3>
+        <div><a href="https://www.petz.com.br/blog/banho-e-tosa/como-dar-banho-em-cachorro/">Você sabe como dar banho em
+            cachorro? Aprenda já!</a></div>
+        <div><a
+            href="https://vetnil.com.br/blog/dermatite-atopica-em-caes-e-gatos-saiba-mais-sobre-essa-doenca-de-pele">Dermatite
+            atópica em cães e gatos</a></div>
+        <div><a href="https://www.petz.com.br/blog/bem-estar/cachorro-precisa-passear/">Cachorro precisa passear? Veja a
+            importância</a></div>
+        <div><a href="https://www.petz.com.br/blog/pets/gatos/o-que-fazer-para-o-gato-nao-arranhar-o-sofa/">O que fazer
+            para o gato não arranhar o sofá?</a></div>
+        <div><a href="https://www.petz.com.br/blog/pets/gatos/sexto-sentido-gato-some-quando-vai-morrer/">Sexto sentido:
+            gato some quando vai morrer?</a></div>
+        <div><a href="https://www.petz.com.br/blog/pets/caes/como-brincar-com-cachorro-cego/">Descubra como brincar com
+            cachorro cego pode ser divertido!</a></div>
+      </div>
+    </footer>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>

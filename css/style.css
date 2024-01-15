@@ -1,47 +1,108 @@
-:root {
-  --primary: #4f6f52;
-  --secondary: #739072;
-  --tertiary: #86a789;
-  --quaternary: #d2e3c8;
-  --beige: #f6f2db;
-}
-
-.navbar {
-  background-color: var(--primary) !important;
-}
-
-.ph .ph-paw-print {
-  font-size: 2rem;
-}
-
 body {
-  background-color: var(--beige);
+  background-color: var(--bg-color);
 }
 
-main {
-  margin-top: 3.5rem;
+main section {
+  margin-bottom: 6rem;
 }
 
-/* .custom-container {
-  width: min(100% - 60px, 1440px);
+.button-change-image-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  transform: translateY(-70px);
+  width: fit-content;
   margin: 0 auto;
-} */
+  padding: 4px;
+}
+
+.button-change-image-container input[type="radio"] {
+  display: none;
+}
+
+.radio-container {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+}
+
+.radio-container label {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.custom-radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.button-change-image-container input[type="radio"]:checked + .custom-radio {
+  background-color: var(--primary);
+}
 
 .hero-img {
-  height: 800px;
+  margin-top: 3.5rem;
+  display: block;
+  width: 100%;
+  height: fit-content;
+  max-height: 700px;
   object-fit: cover;
   object-position: center;
+  margin-bottom: 2rem;
+}
+
+.container-welcome {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--primary);
+}
+
+.container-welcome strong {
+  color: var(--primary);
+}
+
+.container-welcome h1 {
+  font-size: 3rem;
+}
+
+.container-welcome p {
+  font-size: 1.3rem;
 }
 
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .card-custom {
   width: min(100%, 300px);
+  text-align: center;
+  background-color: var(--secondary);
+  color: var(--text-white);
+  padding-block: 0.5rem;
+}
+
+.card-custom img {
+  max-width: 12rem;
+  width: 90%;
+}
+
+.card-title-custom {
+  font-size: 1.5rem;
+}
+
+.card-text-custom {
+  font-size: 1.25rem;
 }
 
 .card-image-custom {
@@ -50,31 +111,91 @@ main {
   margin: auto;
 }
 
+.custom-button-card {
+  background-color: var(--bg-color);
+  border-color: var(--primary);
+  border-radius: var(--radii-medium);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.custom-button-card:hover {
+  background-color: var(--secondary);
+  border-color: var(--bg-color);
+}
+
+.custom-button-card:active {
+  background-color: var(--secondary) !important;
+  border-color: var(--bg-color) !important;
+}
+
+.modal-header-custom {
+  background-color: var(--primary);
+  padding-inline: 2rem;
+}
+
+.modal-title-custom {
+  color: var(--text-white);
+  font-size: 1.75rem;
+}
+
+.custom-modal-body {
+  padding-inline: 2rem;
+  background-color: var(--bg-color);
+  border-radius: var(--radii-medium);
+}
+
+.modal-img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-paragraph {
+  font-size: 1.25rem;
+  text-align: justify;
+}
+
+.modal-subtitle {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
 .about-us-container {
   display: flex;
-  justify-content: space-evenly;
+  gap: 3rem;
+  justify-content: space-between;
 }
 
-.image-about {
-  position: relative;
-
-  width: 150px;
-
-  height: 150px;
-
-  border-radius: 9999px;
-
-  overflow: hidden;
+.about-us-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
 }
 
-.image-about img {
-  max-width: 250px;
+.about-us-info p {
+  font-size: 1.35rem;
+  font-weight: 400;
+}
 
-  position: absolute;
+.about-us-info button {
+  width: 7rem;
+  float: inline-end;
+  background-color: var(--primary);
+  border-color: var(--primary);
+  border-radius: var(--radii-medium);
+  font-weight: 500;
+}
 
-  top: 0px;
+.about-us-info a {
+  text-decoration: none;
+  color: var(--text-white);
+  display: block;
+}
 
-  left: -50px;
+.about-us-info button:hover {
+  background-color: var(--secondary);
 }
 
 .advantages-container {
@@ -89,4 +210,143 @@ main {
   height: 200px;
   border: 1px solid black;
   border-radius: 50%;
+}
+
+.section-services {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  background-color: var(--secondary);
+  border-radius: var(--radii-small);
+  padding: 1.5rem 2rem 2rem 2rem;
+  color: var(--text-white);
+}
+
+.section-services h3 {
+  margin-bottom: 1.5rem;
+}
+
+.cards-advantages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.testimonials {
+  aspect-ratio: 1.29;
+  object-fit: cover;
+  width: 15.625rem;
+}
+
+.cards-advantages-info {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.2;
+  gap: 1.5rem;
+}
+
+.cards-advantages-info p {
+  font-size: 1.15rem;
+  line-height: 1.4rem;
+  margin-bottom: 0;
+}
+
+.cards-advantages-info a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text-white);
+  border-bottom: 1px solid transparent;
+}
+
+.cards-advantages-info a:hover {
+  border-bottom: 1px solid var(--text-white);
+}
+
+.cards-advantages-info a i {
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card-advantage-circle {
+  color: var(--text-white);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--text-white);
+
+  width: 4rem;
+  height: 4rem;
+}
+
+.our-services-info li {
+  font-size: 1.15rem;
+}
+
+@media (max-width: 768px) {
+  .container-welcome h1 {
+    font-size: 2.3rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-us-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-us-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    line-height: 1.7rem;
+  }
+
+  .about-us-info p {
+    font-size: 1.2rem;
+  }
+
+  .about-us-info button {
+    float: none;
+    width: 100%;
+  }
+
+  .section-services {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    border-radius: 0;
+  }
+
+  .cards-advantages {
+    flex-direction: column;
+  }
+
+  .div-services {
+    max-width: 100%;
+  }
+
+  .modal-paragraph {
+    line-height: 1.3rem;
+    font-size: 1rem;
+  }
 }

@@ -1,81 +1,207 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Clínica VetPet</title>
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../css/style.css">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar bg-body-tertiary fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"
-            ><i class="ph ph-paw-print mx-3"></i><strong>Pet</strong>Clinic</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-end"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                <i class="ph ph-paw-print mx-3"></i><strong>Pet</strong>Clinic</a
-                >
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html"
-                          >Home</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="../pages/especialidades.html"
-                          >Especialidades</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="../pages/exames.html"
-                          >Exames</a
-                        >
-                      </li>
-              </ul>
-            </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Agende sua consulta!" />
+  <meta name="keywords" content="agendamentos, consultas, atendimento" />
+  <meta name="author" content="André, Wesley, Victor" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clínica VetPet | Consultas</title>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/consultas.css">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md fixed-top custom-header header-text-white">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html"><i class="ph ph-paw-print"></i>
+          <div><strong>Vet</strong>Pet</div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <i class="ph ph-list"></i>
+        </button>
+        <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <i class="ph ph-paw-print"></i><strong>Pet</strong>Clinic</a>
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/especialidades.html">Especialidades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/exames.html">Exames</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </nav>
-    </header>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="presentation">
+      <img src="../assets/img-01.webp" class="presentation-img" alt="imagem de apresentação da pagina de consulta">
+      <div class="container presentation-description">
+        <h1>Agendamento Rápido em <span>3 Simples Passos</span></h1>
+        <p>No Consulta Pet Online, tornamos o processo de agendamento de consultas veterinárias simples e conveniente.
+          Siga estas três etapas fáceis para garantir o melhor cuidado para o seu amado animal de estimação: </p>
+      </div>
+      <div class="presentation-steps container">
+        <div class="card custom-card-presentation">
+          <div class="custom-card-header-presentation">
+            <h3 class="fw-bold">01</h3>
+            <p class="font-monospace">ESCOLHA</p>
+          </div>
+          <div class="custom-card-body-presentation">
+            <h2 class="fw-bold">Identificação do Cliente</h2>
+            <p>Preencha suas informações e do seu animalzinho.</p>
+          </div>
+        </div>
+        <div class="card custom-card-presentation">
+          <div class="custom-card-header-presentation">
+            <h3 class="fw-bold">02</h3>
+            <p class="font-monospace">ESCOLHA</p>
+          </div>
+          <div class="custom-card-body-presentation">
+            <h2 class="fw-bold">Especialidade Veterinária</h2>
+            <p>Selecione qual tipo de consulta você deseja realizar com seu pet e o médico responsável.</p>
+          </div>
+        </div>
+        <div class="card custom-card-presentation">
+          <div class="custom-card-header-presentation">
+            <h3 class="fw-bold">03</h3>
+            <p class="font-monospace">ESCOLHA</p>
+          </div>
+          <div class="custom-card-body-presentation">
+            <h2 class="fw-bold">Agendamento</h2>
+            <p>Selecione a data que deseja realizar sua consulta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <form class="custom-container-form" onsubmit="onSubmit(event)">
+        <h2 class="fw-bold">Formulário de agendamento</h2>
+        <div class="custom-form-group">
+          <div class="custom-form-item">
+            <label class="form-label" for="client-name">Nome do Cliente*:</label>
+            <input type="text" id="client-name" class="form-control" placeholder="Fulano de tal" required
+              title="Digite seu nome"
+              pattern="[A-Za-záéíóúâêîôûãÁÉÍÓÚÂÊÎÔÛ][A-Za-záéíóúâêîôûãÁÉÍÓÚÂÊÎÔÛ]*(?: [A-Za-záéíóúâêîôûãÁÉÍÓÚÂÊÎÔÛ]+)*$">
+          </div>
+
+          <div class="custom-form-item">
+            <label class="form-label" for="client-tel" required>Telefone Whatsapp*:</label>
+            <input type="text" id="client-tel" class="form-control" placeholder="(XX) X XXXX-XXXX"
+              pattern="\([0-9]{2}\) [0-9] [0-9]{4}-[0-9]{4}" required title="Digite seu telefone">
+          </div>
+        </div>
+
+        <div class="custom-form-group" id="animal-form-group">
+          <div class="custom-form-item">
+            <label for="animal-select" class="form-label">Animal</label>
+            <select class="form-select" id="animal-select">
+            </select>
+          </div>
+        </div>
+
+
+        <div class="custom-form-group mt-3">
+          <div class="custom-form-item">
+            <label class="form-label" for="specialty">Especialidade</label>
+            <select class="form-select" id="specialty">
+            </select>
+          </div>
+
+          <div class="custom-form-item">
+            <label class="form-label" for="doctor">Médico Veterinário</label>
+            <select class="form-select" name="doctor" id="doctor">
+            </select>
+          </div>
+
+          <div class="custom-form-item">
+            <label for="date-query">Horários Disponíveis</label>
+            <input type="datetime-local" name="date-query" required id="date-query" class="form-control">
+          </div>
+        </div>
+
+        <div class="custom-btn-form-container">
+          <button type="submit" class="mt-3 custom-btn-form">Agendar</button>
+        </div>
+        <p class="custom-container-form-status" id="status"></p>
+        </form>
+      </section>
+  
+      <section class="container custom-calendar text-center">
+        <h2>Nossa agenda essa semana: </h2>
+  
+        <div id="specific-query" class="queries-container">
+  
+        </div>
+      </section>
+    </main>
+
+  <div class="footer-container">
+    <footer class="container">
+      <div>
+        <h3>Nossa localização</h3>
+        <iframe title="Endereço da clínica"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.408814811345!2d-51.20387612364745!3d-29.996415629052485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977775fc4c071%3A0x6de693cbd6b0b5e5!2sDBC!5e0!3m2!1spt-BR!2sbr!4v1705090856925!5m2!1spt-BR!2sbr"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div class="footer-icons">
+        <h3>Entre em contato</h3>
+        <p class="icon-custom"><i class="ph ph-house"></i>Tv. São José, 455 - Navegantes, Porto Alegre - RS</p>
+        <p class="icon-custom"><i class="ph ph-phone"></i>+55 (51) 9 9999-9999</p>
+        <p class="icon-custom"><i class="ph ph-envelope-simple"></i>petclinic@gmail.com</p>
+        <a href="#" aria-label="Nossa página no Twitter"><i class="ph ph-twitter-logo"></i></a>
+        <a href="#" aria-label="Nossa página no Fwitter"><i class="ph ph-facebook-logo"></i></a>
+        <a href="#" aria-label="Nosso email"><i class="ph ph-google-logo"></i></a>
+      </div>
+      
+      <div class="div-links">
+        <h3>Links Úteis</h3>
+        <div><a href="https://www.petz.com.br/blog/banho-e-tosa/como-dar-banho-em-cachorro/">Você sabe como dar banho em
+            cachorro? Aprenda já!</a></div>
+        <div><a
+            href="https://vetnil.com.br/blog/dermatite-atopica-em-caes-e-gatos-saiba-mais-sobre-essa-doenca-de-pele">Dermatite
+            atópica em cães e gatos</a></div>
+        <div><a href="https://www.petz.com.br/blog/bem-estar/cachorro-precisa-passear/">Cachorro precisa passear? Veja a
+            importância</a></div>
+        <div><a href="https://www.petz.com.br/blog/pets/gatos/o-que-fazer-para-o-gato-nao-arranhar-o-sofa/">O que fazer
+            para o gato não arranhar o sofá?</a></div>
+        <div><a href="https://www.petz.com.br/blog/pets/gatos/sexto-sentido-gato-some-quando-vai-morrer/">Sexto sentido:
+            gato some quando vai morrer?</a></div>
+        <div><a href="https://www.petz.com.br/blog/pets/caes/como-brincar-com-cachorro-cego/">Descubra como brincar com
+            cachorro cego pode ser divertido!</a></div>
+      </div>
+    </footer>
+
+    <script src="../js/consultas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      crossorigin="anonymous"></script>
+</body>
+
 </html>
