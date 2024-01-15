@@ -7,11 +7,9 @@ function renderSpecialties() {
     "Ortopedia",
   ];
 
-  const options = specialties
-    .map((specialty) => {
-      return `<option value="${specialty}">${specialty}</option>`;
-    })
-    .join();
+  const options = specialties.reduce((accumulator, specialty) => {
+    return accumulator + `<option value="${specialty}">${specialty}</option>`;
+  }, "");
 
   document.getElementById("specialty").innerHTML = options;
 }
